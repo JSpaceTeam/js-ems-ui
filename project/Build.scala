@@ -34,7 +34,7 @@ object Build extends Build {
     resolvers += "JSpace Maven Repo" at "https://raw.github.com/JSpaceTeam/mavenrepo/master/release"
   ) ++ scalariformSettings ++ net.virtualvoid.sbt.graph.Plugin.graphSettings ++ XitrumPackage.copy()
 
-  lazy val root = Project("hello-world", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/runner.sh", "bin/runner.bat")).aggregate(uiConfigure, uiDevice, uiRbac, uiAdmin, uiDashboard, uiNetworkMonitor)
+  lazy val root = Project("ui-ems", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/runner.sh", "bin/runner.bat")).aggregate(uiConfigure, uiDevice, uiRbac, uiAdmin, uiDashboard, uiNetworkMonitor)
 
   lazy val uiConfigure = Project("ui-configure", file("ui-configure"), settings = gSettings)
 
