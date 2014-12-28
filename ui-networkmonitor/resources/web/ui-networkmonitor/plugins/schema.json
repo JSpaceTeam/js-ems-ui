@@ -1,0 +1,46 @@
+{
+  "name": "nav.network_monitoring",
+  "children": [
+    {
+      "name": "nav.network_monitoring_category",
+      "children": [
+        {
+          "name": "nav.node_list"
+        },
+        {
+          "name": "nav.search"
+        },
+        {
+          "name": "nav.outages"
+        },
+        {
+          "name": "nav.dashboard"
+        },
+        {
+          "name": "nav.events"
+        },
+        {
+          "name": "nav.alarms"
+        },
+        {
+          "name": "nav.notifications"
+        },
+        {
+          "name": "nav.assets"
+        },
+        {
+          "name": "nav.reports"
+        },
+        {
+          "name": "nav.charts"
+        },
+        {
+          "name": "nav.topology"
+        },
+        {
+          "name": "nav.admin"
+        }
+      ]
+    }
+  ]
+}

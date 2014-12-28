@@ -1,0 +1,57 @@
+{
+  "name": "nav.administration",
+  "children": [
+    {
+      "name": "nav.administration_category",
+      "children": [
+        {
+          "name": "nav.fabric",
+          "children": [
+            {
+              "name": "nav.spacenodesettings"
+            },
+            {
+              "name": "nav.snmpmanager"
+            }
+          ]
+        },
+        {
+          "name": "nav.dbbackuprestore"
+        },
+        {
+          "name": "nav.license"
+        },
+        {
+          "name": "nav.applications"
+        },
+        {
+          "name": "nav.troubleshootting"
+        },
+        {
+          "name": "nav.platform_certificate"
+        },
+        {
+          "name": "nav.cacrl_certificate"
+        },
+        {
+          "name": "nav.auth_servers"
+        },
+        {
+          "name": "nav.smtp_servers"
+        },
+        {
+          "name": "nav.proxy_servers"
+        },
+        {
+          "name": "nav.tags"
+        },
+        {
+          "name": "nav.dmi_schema"
+        },
+        {
+          "name": "nav.audit_log"
+        }
+      ]
+    }
+  ]
+}

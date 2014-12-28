@@ -1,0 +1,32 @@
+{
+  "name": "nav.configure",
+  "children": [
+    {
+      "name": "nav.reports",
+      "children": [
+        {
+          "name": "nav.reportdefinition"
+        },
+        {
+          "name": "nav.generatedreport"
+        }
+      ]
+    },
+    {
+      "name": "nav.configfiles",
+      "children": [
+        {
+          "name": "nav.configfilemgmt"
+        }
+      ]
+    },
+    {
+      "name": "nav.jobs",
+      "children": [
+        {
+          "name": "nav.jobmgmt"
+        }
+      ]
+    }
+  ]
+}

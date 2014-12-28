@@ -1,0 +1,76 @@
+{
+  "name": "nav.space_device",
+  "children": [
+    {
+      "name": "nav.device_management_category",
+      "children": [
+        {
+          "name": "nav.device_management"
+        },
+        {
+          "name": "nav.device_discovery"
+        },
+        {
+          "name": "nav.model_devices"
+        },
+        {
+          "name": "nav.connection_profiles"
+        },
+        {
+          "name": "nav.unmanaged_device"
+        },
+        {
+          "name": "nav.secure_console"
+        },
+        {
+          "name": "nav.device_adapters"
+        }
+      ]
+    },
+    {
+      "name": "nav.device_template",
+      "children": [
+        {
+          "name": "nav.template"
+        },
+        {
+          "name": "nav.definition"
+        }
+      ]
+    },
+    {
+      "name": "nav.configlet",
+      "children": [
+        {
+          "name": "nav.configlets"
+        },
+        {
+          "name": "nav.configurationview"
+        },
+        {
+          "name": "nav.xpathandreges"
+        },
+        {
+          "name": "nav.configurationfilter"
+        }
+      ]
+    },
+    {
+      "name": "nav.imagesscripts",
+      "children": [
+        {
+          "name": "nav.images"
+        },
+        {
+          "name": "nav.scripts"
+        },
+        {
+          "name": "nav.operations"
+        },
+        {
+          "name": "nav.scriptbundles"
+        }
+      ]
+    }
+  ]
+}

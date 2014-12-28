@@ -1,0 +1,61 @@
+{
+    "name": "RBAC",
+    "publisher": "Juniper Networks, Inc.",
+    "version": "0.0.1",
+    "release_date": "02.07.2014",
+    "min_platform_version": "0.0.1",
+    "navigation_paths": [{"path": "nav.rbac/nav.rbac_category"},
+        {"path": "nav.rbac/nav.rbac_category/nav.useraccounts"},
+        {"path": "nav.rbac/nav.rbac_category/nav.roles"},
+        {"path": "nav.rbac/nav.rbac_category/nav.domains"},
+        {"path": "nav.rbac/nav.rbac_category/nav.remoteprofiles"},
+        {"path": "nav.rbac/nav.rbac_category/nav.usersessions"},
+        {"path": "nav.rbac/nav.rbac_category/nav.apiaccessprofiles"}],
+    "activities": [{
+        "module": "../../../shadowfax/bridge",
+        "filters": [{
+            "data": {
+                "mime_type": "vnd.juniper.net.space.rbac.rbac.useraccounts"
+            }
+        }]
+    },
+        {
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.roles"
+                }
+            }]
+        },
+        {
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.domains"
+                }
+            }]
+        },
+        {
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.remoteprofiles"
+                }
+            }]
+        },
+        {
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.usersessions"
+                }
+            }]
+        },{
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.apiaccessprofiles"
+                }
+            }]
+        }]
+}

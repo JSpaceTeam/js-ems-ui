@@ -1,0 +1,28 @@
+{
+  "name": "nav.rbac",
+  "children": [
+    {
+      "name": "nav.rbac_category",
+      "children": [
+        {
+          "name": "nav.useraccounts"
+        },
+        {
+          "name": "nav.roles"
+        },
+        {
+          "name": "nav.domains"
+        },
+        {
+          "name": "nav.remoteprofiles"
+        },
+        {
+          "name": "nav.usersessions"
+        },
+        {
+          "name": "nav.apiaccessprofiles"
+        }
+      ]
+    }
+  ]
+}

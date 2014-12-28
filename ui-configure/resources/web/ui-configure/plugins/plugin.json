@@ -1,0 +1,44 @@
+{
+    "name": "Configure",
+    "publisher": "Juniper Networks, Inc.",
+    "version": "0.0.1",
+    "release_date": "02.07.2014",
+    "min_platform_version": "0.0.1",
+    "navigation_paths": [{"path": "nav.configure/nav.reports"},
+        {"path": "nav.configure/nav.reports/nav.reportdefinition"},
+        {"path": "nav.configure/nav.reports/nav.generatedreport"},
+        {"path": "nav.configure/nav.configfiles/nav.configfilemgmt"},
+        {"path": "nav.configure/nav.jobs/nav.jobmgmt"}],
+    "activities": [{
+        "module": "../../../shadowfax/bridge",
+        "filters": [{
+            "data": {
+                "mime_type": "vnd.juniper.net.space.configure.configure.reports.reportdefinition"
+            }
+        }]
+    },
+        {
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.configure.configure.reports.generatedreport"
+                }
+            }]
+        },
+        {
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.configure.configfilemgmt"
+                }
+            }]
+        },
+        {
+            "module": "../../../shadowfax/bridge",
+            "filters": [{
+                "data": {
+                    "mime_type": "vnd.juniper.net.space.configure.jobmgmt"
+                }
+            }]
+        }]
+}
