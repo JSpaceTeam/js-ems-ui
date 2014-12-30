@@ -21,6 +21,7 @@
             "module": "../../../shadowfax/bridge",
             "filters": [{
                 "data": {
+                    "task_id": "ui-device/devicemgmt",
                     "mime_type": "vnd.juniper.net.space.configure.configure.reports.generatedreport"
                 }
             }]
