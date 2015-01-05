@@ -4,40 +4,44 @@
     "version": "0.0.1",
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
-    "navigation_paths": [{"path": "nav.configure/nav.reports"},
-        {"path": "nav.configure/nav.reports/nav.reportdefinition"},
-        {"path": "nav.configure/nav.reports/nav.generatedreport"},
-        {"path": "nav.configure/nav.configfiles/nav.configfilemgmt"},
-        {"path": "nav.configure/nav.jobs/nav.jobmgmt"}],
+    "navigation_paths": [{"path": "nav.space.configure/nav.space.reports"},
+        {"path": "nav.space.configure/nav.space.reports/nav.space.reportdefinition"},
+        {"path": "nav.space.configure/nav.space.reports/nav.space.generatedreport"},
+        {"path": "nav.space.configure/nav.space.configfiles/nav.space.configfilemgmt"},
+        {"path": "nav.space.configure/nav.space.jobs/nav.space.jobmgmt"}],
     "activities": [{
-        "module": "../../../shadowfax/bridge",
+        "module": "ss_bridge/bridge",
         "filters": [{
             "data": {
+                "uri": "ui-configure/report_definition_management_ilp",
                 "mime_type": "vnd.juniper.net.space.configure.configure.reports.reportdefinition"
             }
         }]
     },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
                     "task_id": "ui-device/devicemgmt",
+                    "uri": "ui-configure/generated_report_management_ilp",
                     "mime_type": "vnd.juniper.net.space.configure.configure.reports.generatedreport"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-configure/config_file_management_ilp",
                     "mime_type": "vnd.juniper.net.space.configure.configfilemgmt"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-configure/job_management_ilp",
                     "mime_type": "vnd.juniper.net.space.configure.jobmgmt"
                 }
             }]

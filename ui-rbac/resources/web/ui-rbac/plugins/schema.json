@@ -1,26 +1,35 @@
-{
-  "name": "nav.rbac",
+{  
+  "index": 50,
+  "displayName": "Role Based Access Control",
+  "name": "nav.space.rbac",
   "children": [
     {
-      "name": "nav.rbac_category",
+      "displayName": "RBAC",
+      "name": "nav.space.rbac_category",
       "children": [
         {
-          "name": "nav.useraccounts"
+          "displayName": "User Accounts",
+          "name": "nav.space.useraccounts"
         },
         {
-          "name": "nav.roles"
+          "displayName": "Roles",
+          "name": "nav.space.roles"
         },
         {
-          "name": "nav.domains"
+          "displayName": "domains",
+          "name": "nav.space.domains"
         },
         {
-          "name": "nav.remoteprofiles"
+          "displayName": "Remote Profiles",
+          "name": "nav.space.remoteprofiles"
         },
         {
-          "name": "nav.usersessions"
+          "displayName": "User Sessions",
+          "name": "nav.space.usersessions"
         },
         {
-          "name": "nav.apiaccessprofiles"
+          "displayName": "API Access Profiles",
+          "name": "nav.space.apiaccessprofiles"
         }
       ]
     }

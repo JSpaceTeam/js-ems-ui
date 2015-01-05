@@ -1,44 +1,59 @@
 {
-  "name": "nav.network_monitoring",
+  "index": 40,
+  "displayName": "Network Monitoring",
+  "name": "nav.space.network_monitoring",
   "children": [
     {
-      "name": "nav.network_monitoring_category",
+      "displayName": "Network Monitoring Category",
+      "name": "nav.space.network_monitoring_category",
       "children": [
         {
-          "name": "nav.node_list"
+          "displayName": "Node List",
+          "name": "nav.space.node_list"
         },
         {
-          "name": "nav.search"
+          "displayName": "Search",
+          "name": "nav.space.search"
         },
         {
-          "name": "nav.outages"
+          "displayName": "Outages",
+          "name": "nav.space.outages"
         },
         {
-          "name": "nav.dashboard"
+          "displayName": "Dashboard",
+          "name": "nav.space.dashboard"
         },
         {
-          "name": "nav.events"
+          "displayName": "Events",
+          "name": "nav.space.events"
         },
         {
-          "name": "nav.alarms"
+          "displayName": "Alarms",
+          "name": "nav.space.alarms"
         },
         {
-          "name": "nav.notifications"
+          "displayName": "Notifications",
+          "name": "nav.space.notifications"
         },
         {
-          "name": "nav.assets"
+          "displayName": "Assets",
+          "name": "nav.space.assets"
         },
         {
-          "name": "nav.reports"
+          "displayName": "Reports",
+          "name": "nav.space.reports"
         },
         {
-          "name": "nav.charts"
+          "displayName": "Charts",
+          "name": "nav.space.charts"
         },
         {
-          "name": "nav.topology"
+          "displayName": "Topology",
+          "name": "nav.space.topology"
         },
         {
-          "name": "nav.admin"
+          "displayName": "Admin",
+          "name": "nav.space.admin"
         }
       ]
     }
