@@ -4,105 +4,126 @@
     "version": "0.0.1",
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
-    "navigation_paths": [{"path": "nav.network_monitoring/nav.network_monitoring_category"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.node_list"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.search"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.outages"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.dashboard"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.events"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.alarms"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.notifications"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.assets"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.reports"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.charts"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.topology"},
-        {"path": "nav.network_monitoring/nav.network_monitoring_category/nav.admin"}
+    "navigation_paths": [{"path": "nav.space.network_monitoring/nav.space.network_monitoring_category"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.node_list"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.search"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.outages"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.dashboard"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.events"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.alarms"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.notifications"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.assets"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.reports"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.charts"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.topology"},
+        {"path": "nav.space.network_monitoring/nav.space.network_monitoring_category/nav.space.admin"}
     ],
     "activities": [{
-        "module": "../../../shadowfax/bridge",
+        "module": "ss_bridge/bridge",
         "filters": [{
             "data": {
+                "uri": "ui-networkmonitor/node_list_management_ilp",
                 "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.node_list"
             }
         }]
     },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.search"
-            }
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/search_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.search"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/outages_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.outages"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/dashboard_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.dashboard"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/events_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.events"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/alarms_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.alarms"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/notifications_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.notifications"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/assets_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.assets"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/reports_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.reports"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/charts_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.charts"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/topology_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.topology"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-networkmonitor/admin_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.admin"
+                }
+            }]
         }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.outages"
-            }
-        }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.events"
-            }
-        }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.alarms"
-            }
-        }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.notifications"
-            }
-        }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.assets"
-            }
-        }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.reports"
-            }
-        }]
-    },{
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.charts"
-            }
-        }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.topology"
-            }
-        }]
-    },
-    {
-        "module": "../../../shadowfax/bridge",
-        "filters": [{
-            "data": {
-                "mime_type": "vnd.juniper.net.space.network_monitoring.network_monitoring.admin"
-            }
-        }]
-    }]
 }

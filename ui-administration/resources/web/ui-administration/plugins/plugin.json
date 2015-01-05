@@ -4,119 +4,142 @@
     "version": "0.0.1",
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
-    "navigation_paths": [{"path": "nav.administration/nav.administration_category"},
-        {"path": "nav.administration/nav.administration_category/nav.fabric"},
-        {"path": "nav.administration/nav.administration_category/nav.dbbackuprestore"},
-        {"path": "nav.administration/nav.administration_category/nav.license"},
-        {"path": "nav.administration/nav.administration_category/nav.applications"},
-        {"path": "nav.administration/nav.administration_category/nav.troubleshootting"},
-        {"path": "nav.administration/nav.administration_category/nav.platform_certificate"},
-        {"path": "nav.administration/nav.administration_category/nav.cacrl_certificate"},
-        {"path": "nav.administration/nav.administration_category/nav.auth_servers"},
-        {"path": "nav.administration/nav.administration_category/nav.smtp_servers"},
-        {"path": "nav.administration/nav.administration_category/nav.proxy_servers"},
-        {"path": "nav.administration/nav.administration_category/nav.tags"},
-        {"path": "nav.administration/nav.administration_category/nav.dmi_schema"},
-        {"path": "nav.administration/nav.administration_category/nav.audit_log"}
+    "navigation_paths": [{"path": "nav.space.administration/nav.space.fabric"},
+        {"path": "nav.space.administration/nav.space.fabric/nav.space.spacenodesettings"},
+        {"path": "nav.space.administration/nav.space.fabric/nav.space.snmpmanager"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.dbbackuprestore"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.license"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.applications"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.troubleshootting"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.platform_certificate"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.cacrl_certificate"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.auth_servers"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.smtp_servers"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.proxy_servers"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.tags"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.dmi_schema"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.audit_log"}
     ],
     "activities": [{
-        "module": "../../../shadowfax/bridge",
+        "module": "ss_bridge/bridge",
         "filters": [{
             "data": {
-                "mime_type": "vnd.juniper.net.space.administration.administration.fabric"
+                "uri": "ui-administration/space_node_management_ilp",
+                "mime_type": "vnd.juniper.net.space.administration.administration.spacenodesettings"
             }
         }]
     },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/snmp_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.administration.administration.snmpmanager"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ui-administration/database_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.dbbackuprestore"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/license_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.license"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/applications_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.applications"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/troubleshootting_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.troubleshootting"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/platform_certificate_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.platform_certificate"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/cacrl_certificate_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.cacrl_certificate"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/auth_servers_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.auth_servers"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/smtp_servers_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.smtp_servers"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/proxy_servers_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.proxy_servers"
                 }
             }]
         },{
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/tags_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.tags"
                 }
             }]
         },{
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/dmi_schema_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.dmi_schema"
                 }
             }]
         },
         {
-            "module": "../../../shadowfax/bridge",
+            "module": "ss_bridge/bridge",
             "filters": [{
                 "data": {
+                    "uri": "ui-administration/audit_log_management_ilp",
                     "mime_type": "vnd.juniper.net.space.administration.administration.audit_log"
                 }
             }]

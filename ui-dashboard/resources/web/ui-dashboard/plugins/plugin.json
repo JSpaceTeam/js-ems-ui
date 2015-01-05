@@ -1,3 +1,8 @@
 {
-
+  "name": "Network Monitoring",
+  "publisher": "Juniper Networks, Inc.",
+  "version": "0.0.1",
+  "release_date": "02.07.2014",
+  "min_platform_version": "0.0.1",
+  "navigation_paths": []
 }

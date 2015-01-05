@@ -1,74 +1,97 @@
 {
-  "name": "nav.space_device",
+  "index": 20,
+  "displayName": "Devices",
+  "name": "nav.space.device",
   "children": [
     {
-      "name": "nav.device_management_category",
+      "displayName": "Devices Category",
+      "name": "nav.space.device_management_category",
       "children": [
         {
-          "name": "nav.device_management"
+          "displayName": "Devices Management",
+          "name": "nav.space.device_management"
         },
         {
-          "name": "nav.device_discovery"
+          "displayName": "Discovery",
+          "name": "nav.space.device_discovery"
         },
         {
-          "name": "nav.model_devices"
+          "displayName": "Model",
+          "name": "nav.space.model_devices"
         },
         {
-          "name": "nav.connection_profiles"
+          "displayName": "Connection Profiles",
+          "name": "nav.space.connection_profiles"
         },
         {
-          "name": "nav.unmanaged_device"
+          "displayName": "Unmanaged Device",
+          "name": "nav.space.unmanaged_device"
         },
         {
-          "name": "nav.secure_console"
+          "displayName": "Secure Console",
+          "name": "nav.space.secure_console"
         },
         {
-          "name": "nav.device_adapters"
+          "displayName": "Devices Adapter",
+          "name": "nav.space.device_adapters"
         }
       ]
     },
     {
-      "name": "nav.device_template",
+      "displayName": "Devices Templates",
+      "name": "nav.space.device_template",
       "children": [
         {
-          "name": "nav.template"
+          "displayName": "Templates",
+          "name": "nav.space.template"
         },
         {
-          "name": "nav.definition"
+          "displayName": "Definitions",
+          "name": "nav.space.definition"
         }
       ]
     },
     {
-      "name": "nav.configlet",
+      "displayName": "CLI Configlets",
+      "name": "nav.space.configlet",
       "children": [
         {
-          "name": "nav.configlets"
+          "displayName": "Configlets",
+          "name": "nav.space.configlets"
         },
         {
-          "name": "nav.configurationview"
+          "displayName": "Configuration View",
+          "name": "nav.space.configurationview"
         },
         {
-          "name": "nav.xpathandreges"
+          "displayName": "Xpath and Reges",
+          "name": "nav.space.xpathandreges"
         },
         {
-          "name": "nav.configurationfilter"
+          "displayName": "Configuration Filter",
+          "name": "nav.space.configurationfilter"
         }
       ]
     },
     {
-      "name": "nav.imagesscripts",
+      "displayName": "Images and Scripts",
+      "name": "nav.space.imagesscripts",
       "children": [
         {
-          "name": "nav.images"
+          "displayName": "Images",
+          "name": "nav.space.images"
         },
         {
-          "name": "nav.scripts"
+          "displayName": "Scripts",
+          "name": "nav.space.scripts"
         },
         {
-          "name": "nav.operations"
+          "displayName": "Operations",
+          "name": "nav.space.operations"
         },
         {
-          "name": "nav.scriptbundles"
+          "displayName": "Script Bundles",
+          "name": "nav.space.scriptbundles"
         }
       ]
     }
