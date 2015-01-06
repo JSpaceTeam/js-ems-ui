@@ -1,0 +1,67 @@
+{
+    "name": "RBAC",
+    "publisher": "Juniper Networks, Inc.",
+    "version": "0.0.1",
+    "release_date": "02.07.2014",
+    "min_platform_version": "0.0.1",
+    "navigation_paths": [{"path": "nav.space.rbac/nav.space.rbac_category"},
+        {"path": "nav.space.rbac/nav.space.rbac_category/nav.space.useraccounts"},
+        {"path": "nav.space.rbac/nav.space.rbac_category/nav.space.roles"},
+        {"path": "nav.space.rbac/nav.space.rbac_category/nav.space.domains"},
+        {"path": "nav.space.rbac/nav.space.rbac_category/nav.space.remoteprofiles"},
+        {"path": "nav.space.rbac/nav.space.rbac_category/nav.space.usersessions"},
+        {"path": "nav.space.rbac/nav.space.rbac_category/nav.space.apiaccessprofiles"}],
+    "activities": [{
+        "module": "ss_bridge/bridge",
+        "filters": [{
+            "data": {
+                "uri": "ems-rbac/user_accounts_management_ilp",
+                "mime_type": "vnd.juniper.net.space.rbac.rbac.useraccounts"
+            }
+        }]
+    },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ems-rbac/roles_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.roles"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ems-rbac/domains_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.domains"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ems-rbac/remote_profiles_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.remoteprofiles"
+                }
+            }]
+        },
+        {
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ems-rbac/user_sessions_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.usersessions"
+                }
+            }]
+        },{
+            "module": "ss_bridge/bridge",
+            "filters": [{
+                "data": {
+                    "uri": "ems-rbac/api_access_profiles_management_ilp",
+                    "mime_type": "vnd.juniper.net.space.rbac.rbac.apiaccessprofiles"
+                }
+            }]
+        }]
+}
