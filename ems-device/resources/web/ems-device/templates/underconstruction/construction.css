@@ -1,0 +1,139 @@
+#ems-construction{
+    margin: 0 auto;
+    width:800px;
+    height:595px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+#ems-construction #book {
+	position:relative;
+}
+
+#ems-construction .top-page {
+	background:url(images/top-paper.png) no-repeat left top;
+	width:806px;
+	height:24px;
+	position:relative;
+}
+
+#ems-construction .content-page {
+	background:url(images/row.png) repeat-y left top;
+	width:806px;
+	height:435px;
+	position:relative;
+}
+
+#ems-construction .bottom-page {
+	background:url(images/bottom-paper.png) no-repeat left top;
+	width:806px;
+	height:55px;
+}
+
+#ems-construction .top-spiral {
+	position:absolute;
+	background:url(images/spiral.png) no-repeat scroll 0 0;
+	width:38px;
+	height:89px;
+	left:-9px;
+	top:61px;
+}
+
+#ems-construction .bottom-spiral {
+	position:absolute;
+	background:url(images/spiral.png) no-repeat scroll 0 0;
+	width:38px;
+	height:89px;
+	left:-9px;
+	top:293px;
+}
+
+#ems-construction .row-placeholder {
+	width:100%;
+	height:29px;
+	clear:both;
+}
+
+#ems-construction h2 {
+	font-family: 'CopseRegular', CopseRegular, Helvetica, Arial, sans-serif;
+	font-size:28px;
+	text-align:center;
+	height:29px;
+	line-height:32px;
+	font-weight:normal;
+	text-shadow: 1px 1px 0px #e1e1e1;
+	position:relative;
+}
+
+#ems-construction h3 {
+	font-family:Georgia;
+	font-size:18px;
+	font-style:italic;
+	text-align:center;
+	height:29px;
+	line-height:38px;
+	font-weight:normal;
+	color:#a5a5a5;
+}
+
+#ems-construction h4 {
+	font-family:Georgia;
+	font-size:14px;
+	font-style:italic;
+	text-align:center;
+	height:29px;
+	line-height:38px;
+	font-weight:normal;
+	color:#a5a5a5;
+}
+
+#ems-construction #countdown {
+	float:left;
+	padding:21px 0 10px 105px;
+	position:relative;
+}
+
+#ems-construction .hasCountdown {
+	height:115px;
+}
+
+#ems-construction .item {
+	float:left;
+	text-align:center;
+	margin:0 24px;
+	width:100px;
+	height:100px;
+	border:1px solid #e5e5e5;
+	background:#fdfdfd url(images/form-pattern.png) repeat scroll 0 0;
+	-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#ems-construction .item span {
+	font-size:16px;
+	clear:both;
+	color:#a5a5a5;
+}
+
+#ems-construction .item p {
+	text-align:center;
+	margin-bottom:10px;
+	font-size:48px;
+	height:60px;
+	line-height:64px;
+}
+
+#ems-construction .links {
+	clear:both;
+	width:470px;
+	border:1px solid #e5e5e5;
+	background:#fdfdfd url(images/form-pattern.png) repeat scroll 0 0;
+	-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+	padding:8px;
+	margin-left: 160px;
+	margin-top:13px;
+	overflow:hidden;
+	position:relative;
+}
