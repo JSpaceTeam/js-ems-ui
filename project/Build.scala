@@ -20,19 +20,19 @@ object Build extends Build {
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
       "net.juniper" %% "easy-rest-core" % "0.1",
-      "net.juniper" %% "ui-core" % "0.1",
-      "net.juniper" %% "ui-base" % "0.1",
-      "net.juniper" %% "webserver" % "0.1",
+      "net.juniper" %% "shadowfax-ui-core" % "0.1",
+      "net.juniper" %% "shadowfax-ui-base" % "0.1",
+      "net.juniper" %% "shadowfax-webserver" % "0.1",
       "com.github.tntim96" % "JSCover" % "1.0.15" % "test",
       "com.github.detro" % "phantomjsdriver" % "1.2.0",
       "org.specs2" %%  "specs2-core"   % "2.3.11"
     ),
     publishMavenStyle := true,
     parallelExecution in Test := false,
-    publishTo := Some(Resolver.file("file",  new File("../mavenrepo/release"))),
+    publishTo := Some(Resolver.file("file",  new File(System.getProperty("user.home") + "/mavenrepo/release"))),
     unmanagedResourceDirectories in Compile += baseDirectory.value / "resources",
     unmanagedResources in Compile += baseDirectory.value / "web.json",
-    resolvers += "JSpace Maven Repo" at "https://raw.github.com/JSpaceTeam/mavenrepo/master/release"
+    resolvers += "JSpace Maven Repo" at "http://10.155.87.253:8080/mavenrepo/release"
   ) ++ scalariformSettings ++ net.virtualvoid.sbt.graph.Plugin.graphSettings ++ XitrumPackage.copy()
 
   lazy val root = Project("ems-ui", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/run.sh", "bin/run.bat")).aggregate(emsConfigure, emsDevice, emsRbac, emsAdmin, emsNetworkMonitor)
