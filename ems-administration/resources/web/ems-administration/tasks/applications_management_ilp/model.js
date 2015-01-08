@@ -1,3 +1,3 @@
-wdefine(function() {
-
+wdefine(function(){
+    this.config({title: "Applications"});
 });
