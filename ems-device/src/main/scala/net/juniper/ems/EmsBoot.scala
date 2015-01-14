@@ -2,7 +2,6 @@ package net.juniper.ems
 
 import net.juniper.easyrest.boot.Bootstrap
 import net.juniper.shadowfax.webserver.boot.WebActor
-import spray.routing.Route
 
 /**
  * Ems app bootstrap.
