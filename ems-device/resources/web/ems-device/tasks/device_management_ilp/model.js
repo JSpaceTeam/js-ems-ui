@@ -2,8 +2,7 @@ wdefine(function(){
     this.config({title: "Device Management"});
     this.model("main_model", {
         lazyInit: false,
-        dataSelector: "device",
-        url: Jx.Global.API_PREFIX + "/devmgt:devicemgt/devices",
+        url: Jx.Global.API_PREFIX + "/devicemanagement:device",
         requestHeader:{Accept:'application/yang.data+json'}
     });
 

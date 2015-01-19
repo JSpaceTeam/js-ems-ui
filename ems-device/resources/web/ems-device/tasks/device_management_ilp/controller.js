@@ -5,7 +5,7 @@ wdefine(function () {
      */
     this.component("main_grid").on("celllink", function (options) {
         if(options.field == "system.hostname")
-            Jx.Navigation.navigateToStack("js-ems-ui/devicedetails", {navItem: options.value.id}, {title: options.value.title, parent: me});
+            Jx.Navigation.navigateToStack("ems-device/device_details", {navItem: options.value.id}, {title: options.value.title, parent: me});
     });
 
     this.component('main_menu').on('click', function (options) {

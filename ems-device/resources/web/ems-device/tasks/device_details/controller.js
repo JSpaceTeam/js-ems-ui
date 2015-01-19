@@ -22,11 +22,11 @@ wdefine(function() {
 	
 	navTab.on("activate", function(options){
 		var item = options.trigger;
-		doInitApp("js-ems-ui/" + item, {navItem: this.ctx.reqData("navItem")}, {container: navTab.content(item), parent: me});
+		doInitApp("ems-device/" + item, {navItem: this.ctx.reqData("navItem")}, {container: navTab.content(item), parent: me});
 	});
 
     this.on("loaded", function() {
-        doInitApp("js-ems-ui/deviceoverview", {navItem: this.reqData("navItem")}, {container: navTab.content(0), parent: me});
+        doInitApp("ems-device/deviceoverview", {navItem: this.reqData("navItem")}, {container: navTab.content(0), parent: me});
     });
 
     function doInitApp(id, reqData, options){
