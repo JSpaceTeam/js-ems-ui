@@ -1,0 +1,139 @@
+<div data-jx-type="template" data-jx-meta="ems-device/devicedetails">
+	<div data-jx-for="body" class="s-deviceoverview">
+        <div class="row">
+            <div id="summaryfs" class="noborder" data-jx-type="fieldset">
+                Summary
+                <div class="row">
+                    <div class="small-6 large-4 columns s-summary">
+                        <ul><li>Host Name: </li><li id="device_hostname">caoguojiu</li></ul>
+                        <ul><li>Ip Address: </li><li id="device_ip">10.155.143.223</li></ul>
+                        <ul><li>Model Device: </li>
+                            <li id="device_model">
+                                <span style="padding-right:10px">Yes</span>
+                                <span id="activate_md_bt" data-jx-type="button" data-jx-meta="{text:'Activate Model Device', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Serial Number: </li>
+                            <li id="device_sn">
+                                <span>AG8-q4u3009458</span>
+                                <span id="modify_sn_bt" data-jx-type="button" data-jx-meta="{text:'Modify', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Software version: </li><li id="device_sv">12.3</li></ul>
+                        <ul><li>Bios version: </li><li id="device_bio">1.5</li></ul>
+                        <ul><li>Connection Status: </li><li id="device_status">Up</li></ul>
+                        <ul><li>Alarm Summary: </li>
+                            <li>
+                                <span class="label round alert">12</span>
+                                <span class="label round warning">3</span>
+                                <span class="label round secondary">1</span>
+                                <span class="label round success">22</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="chassis" class="small-5 large-7 columns">
+                        <img src="/js-ems-ui/tasks/deviceoverview/images/MX960_front.jpg"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="row">
+            <div class="small-6 large-4 columns s-configuration">
+				<div id="configurations" data-jx-type="fieldset">
+					Configurations
+                    <div>
+                        <ul><li class="s-configurationfield">Active Configuration: </li>
+                            <li id="active_configuration_li">
+                                <span id="active_configuration_bt" data-jx-type="button" data-jx-meta="{text:'12/23/2014 12 PST', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li class="s-configurationfield">Pending Changes: </li>
+                            <li id="pending_changes_li">
+                                <span id="pending_changes_bt" data-jx-type="button" data-jx-meta="{text:'2', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li class="s-configurationfield">Out-of-band Changes: </li>
+                            <li id="out_of_band_li">
+                                <span id="out_of_band_bt" data-jx-type="button" data-jx-meta="{text:'3', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li class="s-configurationfield">Template Assigned/Deployed: </li>
+                            <li id="t_assigned_li">
+                                <span id="t_assigned_bt" data-jx-type="button" data-jx-meta="{text:'2', style:'link'}"></span>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+            </div>
+            <div class="small-5 large-7 columns s-operation">
+                <div id="operations" data-jx-type="fieldset">
+                    Operations
+                    <div>
+                        <ul><li>Active Configuration: </li>
+                            <li id="out_of_sync_li">
+                                <span style="padding-right: 10px">Yes</span>
+                                <span id="out_of_sync_bt" data-jx-type="button" data-jx-meta="{text:'Resynchronize with Network', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Device in RMA State: </li>
+                            <li id="in_rma_li">
+                                <span style="padding-right: 10px">No</span>
+                                <span id="in_rma_bt" data-jx-type="button" data-jx-meta="{text:'Put in RMA State', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Device Last Re-booted: </li>
+                            <li id="last_reboot_li">
+                                <span id="last_reboot_text" style="padding-right: 10px">12:22:45 05/06/2013 PST</span>
+                                <span id="last_reboot_bt" data-jx-type="button" data-jx-meta="{text:'Re-boot Device', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Partitions: </li>
+                            <li id="partitions_li">
+                                <span id="partitions_bt" data-jx-type="button" data-jx-meta="{text:'3', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Staged Scripts: </li>
+                            <li id="staged_script_li">
+                                <span id="staged_script_bt" data-jx-type="button" data-jx-meta="{text:'2', style:'link'}"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-6 large-4 columns s-os">
+				<div id="os" data-jx-type="fieldset">
+					OS
+                    <div>
+                        <ul><li>Current Image: </li>
+                            <li id="current_image_li">
+                                <span id="current_image_text">Image Version1</span>
+                            </li>
+                        </ul>
+                        <ul><li>Current Schema: </li>
+                            <li id="current_schema_li">
+                                <span id="current_schema_text">Junos EX 12.1R3.5</span>
+                            </li>
+                        </ul>
+                        <ul><li>Staged Images: </li>
+                            <li id="staged_images_li">
+                                <span id="staged_images_bt" data-jx-type="button" data-jx-meta="{text:'2', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Number of Licenses: </li>
+                            <li id="number_of_licenses_li">
+                                <span id="number_of_licenses_bt" data-jx-type="button" data-jx-meta="{text:'1', style:'link'}"></span>
+                            </li>
+                        </ul>
+                        <ul><li>Number of Softwares: </li>
+                            <li id="number_of_software_li">
+                                <span id="number_of_software_bt" data-jx-type="button" data-jx-meta="{text:'2', style:'link'}"></span>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
