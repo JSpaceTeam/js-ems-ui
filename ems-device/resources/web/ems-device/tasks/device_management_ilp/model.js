@@ -3,7 +3,8 @@ wdefine(function(){
     this.model("main_model", {
         lazyInit: false,
         url: Jx.Global.API_PREFIX + "/devicemanagement:device",
-        requestHeader:{Accept:'application/yang.data+json'}
+        requestHeader:{Accept:'application/yang.data+json'},
+        idAttribute: "uuid"
     });
 
     var menuMeta = [{id:'review_changes', name:'Review/Deploy Pending Changes'}, {id:'deploy_template', name:'Assign/Deploy Template'},
@@ -23,7 +24,7 @@ wdefine(function(){
         {id:'assign_domain', name:'Assign to Domain'},
         {id:'create_template', name:'Create Template from Device'}, {id:'export_inventory', name:'Export Physical Inventory'}];
 
-    this.config("main_grid", {height: 390, model: 'main_model',
+    this.config("main_grid", {model: 'main_model',
         columns : [
             {"type":"string", "field":"system.hostname","title":"Name","hidden":false, "width":"180px", template: "LinkTemplate"},
             {"type":"string", "field":"system.ip","title":"IP Address","hidden":false, width: "150px", template: deviceIpFormatter},

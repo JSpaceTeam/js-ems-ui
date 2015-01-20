@@ -9,7 +9,7 @@ wdefine(function() {
         url : Jx.Global.API_PREFIX + "/devicemgmt/devices/"+deviceId+"/partition"
     });
 
-    this.metadata("associated_scripts_grid", {
+    this.config("associated_scripts_grid", {
         height : 390,
         model : 'partition_model',
         columns : [ {
