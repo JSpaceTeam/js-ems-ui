@@ -9,8 +9,15 @@ wdefine(function() {
         url : Jx.Global.API_PREFIX + "/devicemgmt/devices/"+deviceId+"/template"
     });
 
-    this.config("template_grid", {
-        height : 390,
+    this.model("outofband_model", {
+        url : Jx.Global.API_PREFIX + "/devicemgmt/devices/"+deviceId+"/template"
+    });
+
+    this.model("changelog_model", {
+        url : Jx.Global.API_PREFIX + "/devicemgmt/devices/"+deviceId+"/template"
+    });
+
+    this.config("config_grid", {
         model : 'template_model',
         columns : [ {
             "type" : "string",
@@ -42,20 +49,46 @@ wdefine(function() {
             "field" : "timestamp",
             "title" : "Timestamp",
             "visible" : true
-        } ],
-        columnMenu : true,
-        groupable : false,
-        pageable : false,
-        scrollable : false,
-        selectable : "multiple,row",
-        sortable : true,
-        resizable : true,
-        reorderable : true
+        } ]
+    });
+
+    this.config("template_grid", {
+        model : 'template_model',
+        columns : [ {
+            "type" : "string",
+            "field" : "name",
+            "title" : "Template Name",
+            "visible" : true
+        }, {
+            "type" : "string",
+            "field" : "type",
+            "title" : "Type",
+            "visible" : true
+        }, {
+            "type" : "string",
+            "field" : "version",
+            "title" : "Version",
+            "visible" : true
+        }, {
+            "type" : "string",
+            "field" : "state",
+            "title" : "State",
+            "visible" : true
+        }, {
+            "type" : "string",
+            "field" : "actions",
+            "title" : "Actions",
+            "visible" : true
+        }, {
+            "type" : "string",
+            "field" : "timestamp",
+            "title" : "Timestamp",
+            "visible" : true
+        } ]
     });
 
     this.config("outofband_grid", {
-        height : 390,
-        model : 'template_model',
+        model : 'outofband_model',
         columns : [ {
             "type" : "string",
             "field" : "time",
@@ -76,20 +109,11 @@ wdefine(function() {
             "field" : "actions",
             "title" : "Actions",
             "visible" : true
-        } ],
-        columnMenu : true,
-        groupable : false,
-        pageable : false,
-        scrollable : false,
-        selectable : "multiple,row",
-        sortable : true,
-        resizable : true,
-        reorderable : true
+        } ]
     });
 
     this.config("changelog_grid", {
-        height : 390,
-        model : 'template_model',
+        model : 'changelog_model',
         columns : [
         {
             "type" : "string",
@@ -129,14 +153,6 @@ wdefine(function() {
             "field" : "comments",
             "title" : "Commit Comments",
             "visible" : true
-        } ],
-        columnMenu : true,
-        groupable : false,
-        pageable : false,
-        scrollable : false,
-        selectable : "multiple,row",
-        sortable : true,
-        resizable : true,
-        reorderable : true
+        } ]
     });
 });
