@@ -7,12 +7,12 @@ import net.juniper.shadowfax.webserver.boot.WebActor
  * Ems app bootstrap.
  * Created by juntaod on 14-12-27.
  */
-object EmsBoot extends App {
-  new EmsBootstrap().start()
+object EmsGUIBoot extends App {
+  new EmsGUIBootstrap().start()
 }
 
-class EmsActor extends WebActor {
+class EmsGUIActor extends WebActor {
 }
 
-class EmsBootstrap extends Bootstrap[EmsActor]
+class EmsGUIBootstrap extends Bootstrap[EmsGUIActor]
 
