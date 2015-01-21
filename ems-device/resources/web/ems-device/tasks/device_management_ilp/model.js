@@ -28,7 +28,7 @@ wdefine(function(){
         columns : [
             {"type":"string", "field":"system.hostname","title":"Name","hidden":false, width:"180px", template: "LinkTemplate"},
             {"type":"string", "field":"system.ip","title":"IP Address","hidden":false, width: "150px", template: deviceIpFormatter},
-            {"type":"string", "field":"system.serial","title":"Serial Number","hidden":false, "width":"200px"},
+            {"type":"string", "field":"system.serial","title":"Serial Number","hidden":false, "width":"150px"},
             {"type":"string", "field":"mgtConnection.status","title":"Connection Status", width: "120px", valueMap: [
                 {value: "1", text: "Up", image: "/js-ems-ui/tasks/devicemgmt/images/up.png"},
                 {value: Nil, text: "Down", image: "/js-ems-ui/tasks/devicemgmt/images/down.png"}
