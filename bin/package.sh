@@ -30,6 +30,7 @@ package(){
 }
 
 extractGUI(){
+    echo "extracting gui jar files"
     cd $DISTDIR
     files=$(ls -l "$DISTDIR/lib" |awk '/^[^d]/ {print $NF}')
     for f in $files
