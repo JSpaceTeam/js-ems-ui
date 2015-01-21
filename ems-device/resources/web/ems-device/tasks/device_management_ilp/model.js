@@ -43,17 +43,17 @@ wdefine(function(){
             {"type":"string", "field":"system.platform","title":"Platform","hidden":false, width: "150px"},
             {"type":"string", "field":"system.osVersion","title":"OS Version","hidden":true, width: "230px"},
             {"type":"string", "field":"schema","title":"Schema Version","hidden":true,width: "120px"},
-            {"type":"string", "field":"system.domainname","title":"Domain","hidden":false, width: "230px"},
+            {"type":"string", "field":"system.domainname","title":"Domain","hidden":true, width: "230px"},
             {"type":"string", "field":"system.family","title":"Device Family","hidden":false, width: "120px"},
             {"type":"string", "field":"configInfo.candidateConfigState","title":"Configuration State","hidden":true, width: "120px", valueMap: [
                 {value: "0", text: "NA"}, {value: "1", text: "Created"}, {value: "2", text: "Approved"}, {value: "3", text: "Rejected"}, {value: Nil, text: "NA"}
             ]},
-            {"type":"string", "field":"system.lastRebootTime","title":"Last Rebooted Time","hidden":false, template: deviceRebootedTimeFormatter,width: "120px"},
+            {"type":"string", "field":"system.lastRebootTime","title":"Last Rebooted Time","hidden":true, template: deviceRebootedTimeFormatter,width: "120px"},
             {"type":"string", "field":"system.vendor","title":"Vendor","hidden":false,width: "120px"},
             {"type":"string", "field":"mgtConnection.auth","title":"Authentication Status","hidden":false,width: "120px", valueMap: [
                 {value: "0", text: "Credentials Based"}, {value: "1", text: "Key Based"}, {value: "2", text: "Key Conflict"}, {value: Nil, text: "NA"}
             ]},
-            {"type":"string", "field":"mgtConnection.type","title":"Connection Type","hidden":true,width: "120px"}
+            {"type":"string", "field":"mgtConnection.type","title":"Connection Type","hidden":true}
         ],
         contextmenus: {menus: menuMeta}
     });
