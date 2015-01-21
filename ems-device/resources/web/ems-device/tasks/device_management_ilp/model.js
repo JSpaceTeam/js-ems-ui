@@ -28,7 +28,7 @@ wdefine(function(){
         columns : [
             {"type":"string", "field":"system.hostname","title":"Name","hidden":false, width:"180px", template: "LinkTemplate"},
             {"type":"string", "field":"system.ip","title":"IP Address","hidden":false, width: "150px", template: deviceIpFormatter},
-            {"type":"string", "field":"system.serial","title":"Serial Number","hidden":false, "width":"200px"},
+            {"type":"string", "field":"system.serial","title":"Serial Number","hidden":false, "width":"150px"},
             {"type":"string", "field":"mgtConnection.status","title":"Connection Status", width: "120px", valueMap: [
                 {value: "1", text: "Up", image: "/js-ems-ui/tasks/devicemgmt/images/up.png"},
                 {value: Nil, text: "Down", image: "/js-ems-ui/tasks/devicemgmt/images/down.png"}
@@ -43,7 +43,7 @@ wdefine(function(){
             {"type":"string", "field":"system.platform","title":"Platform","hidden":false, width: "150px"},
             {"type":"string", "field":"system.osVersion","title":"OS Version","hidden":true, width: "230px"},
             {"type":"string", "field":"schema","title":"Schema Version","hidden":true,width: "120px"},
-            {"type":"string", "field":"system.domainname","title":"Domain","hidden":false, width: "230px"},
+            {"type":"string", "field":"system.domainname","title":"Domain","hidden":true, width: "230px"},
             {"type":"string", "field":"system.family","title":"Device Family","hidden":false, width: "120px"},
             {"type":"string", "field":"configInfo.candidateConfigState","title":"Configuration State","hidden":true, width: "120px", valueMap: [
                 {value: "0", text: "NA"}, {value: "1", text: "Created"}, {value: "2", text: "Approved"}, {value: "3", text: "Rejected"}, {value: Nil, text: "NA"}

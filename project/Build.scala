@@ -37,15 +37,15 @@ object Build extends Build {
 
   lazy val root = Project("ems-ui", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/run.sh", "bin/run.bat")).aggregate(emsConfigure, emsDevice, emsRbac, emsAdmin, emsNetworkMonitor, boot)
 
-  lazy val emsConfigure = Project("ems-configure", file("ems-configure"), settings = gSettings)
+  lazy val emsConfigure = Project("ems-ui-configure", file("ems-configure"), settings = gSettings)
 
-  lazy val emsDevice = Project("ems-device", file("ems-device"), settings = gSettings)
+  lazy val emsDevice = Project("ems-ui-device", file("ems-device"), settings = gSettings)
 
-  lazy val emsRbac = Project("ems-rbac", file("ems-rbac"), settings = gSettings)
+  lazy val emsRbac = Project("ems-ui-rbac", file("ems-rbac"), settings = gSettings)
 
-  lazy val emsAdmin = Project("ems-administration", file("ems-administration"), settings = gSettings)
+  lazy val emsAdmin = Project("ems-ui-administration", file("ems-administration"), settings = gSettings)
 
-  lazy val emsNetworkMonitor = Project("ems-networkmonitor", file("ems-networkmonitor"), settings = gSettings)
+  lazy val emsNetworkMonitor = Project("ems-ui-networkmonitor", file("ems-networkmonitor"), settings = gSettings)
 
-  lazy val boot = Project("ems-boot", file("ems-boot"), settings = gSettings)
+  lazy val boot = Project("ems-ui-boot", file("ems-boot"), settings = gSettings)
 }
