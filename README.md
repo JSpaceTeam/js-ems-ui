@@ -54,25 +54,29 @@ $ sh idea.sh&
 Here is the command to build the all the projects with sbt:
 
 ```
-$ cd js-easy-rest
-$ sbt compile package
+$ cd js-ems-ui
+$ sbt compile
 ```
 
-Here is the command to start the Spray server
+Here is the command to start the Spray server(With backend support)
 
 ```
 $ sbt "project ems-ui-boot" "run-main net.juniper.ems.EmsGUIWithBackendBoot"
 ```
 
+Here is the command to start the Spray server(Without backend support)
+
+```
+$ sbt "project ems-ui-boot" "run-main net.juniper.ems.EmsGUIBoot"
+```
+
+or
+```
+$ sbt "project ems-ui-boot" run
+```
+
+
 **Code coverage**
-
-To run scoverage code coverage on all unit tests, run the following command:
-
-```
-$ sbt clean compile scoverage:test
-```
-
-The test report is generated under `target/scala-2.11/scoverage-report` directory of each sub-project. Note that scoverage tool can only do code coverage on Scala code. 
 
 To run jacoco code coverage on all unit tests, run the following command:
 
