@@ -19,13 +19,13 @@ object Build extends Build {
     scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8"),
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
-      "net.juniper" %% "easy-rest-core" % "0.1.2",
-      "net.juniper" %% "shadowfax-ui-core" % "0.1.2",
-      "net.juniper" %% "shadowfax-ui-base" % "0.1.2",
-      "net.juniper" %% "shadowfax-webserver" % "0.1.2",
-      "com.github.tntim96" % "JSCover" % "1.0.15" % "test",
-      "com.github.detro" % "phantomjsdriver" % "1.2.0",
-      "org.specs2" %%  "specs2-core"   % "2.3.11"
+      "net.juniper" %% "easy-rest-core" % "0.1.2"           withSources(),
+      "net.juniper" %% "shadowfax-ui-core" % "0.1.2"        withSources(),
+      "net.juniper" %% "shadowfax-ui-base" % "0.1.2"        withSources(),
+      "net.juniper" %% "shadowfax-webserver" % "0.1.2"      withSources(),
+      "com.github.tntim96" % "JSCover" % "1.0.15" % "test"  withSources(),
+      "com.github.detro" % "phantomjsdriver" % "1.2.0"      withSources(),
+      "org.specs2" %%  "specs2-core"   % "2.3.11"           withSources()
     ),
     publishMavenStyle := true,
     parallelExecution in Test := false,
