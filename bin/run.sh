@@ -36,4 +36,4 @@ CLASS_PATH="$ROOT_DIR/lib/*:$ROOT_DIR/gui_lib/*:config"
 # Use exec to be compatible with daemontools:
 # http://cr.yp.to/daemontools.html
 export easy_rest_mode=production
-exec $java_cmd $JAVA_OPTS -cp $CLASS_PATH $@ net.juniper.ems.EmsBoot
+exec $java_cmd $JAVA_OPTS -cp $CLASS_PATH $@ net.juniper.ems.EmsGUIBoot
