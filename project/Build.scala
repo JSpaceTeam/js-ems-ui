@@ -32,6 +32,7 @@ object Build extends Build {
     publishTo := Some(Resolver.file("file",  new File(System.getProperty("user.home") + "/mavenrepo/release"))),
     unmanagedResourceDirectories in Compile += baseDirectory.value / "resources",
     unmanagedResources in Compile += baseDirectory.value / "web.json",
+    resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/mavenrepo/release",
     resolvers += "JSpace Maven Repo" at "http://10.155.87.253:8080/mavenrepo/release"
   ) ++ scalariformSettings ++ net.virtualvoid.sbt.graph.Plugin.graphSettings ++ XitrumPackage.copy()
 
