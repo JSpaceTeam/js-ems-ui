@@ -2,7 +2,7 @@
 
 CURRDIR=`pwd`
 BASEDIR=$CURRDIR/..
-DISTDIR=$BASEDIR/target/dist
+DISTDIR=$BASEDIR/target/dist/js-ems-ui
 
 package(){
     rm -rf $DISTDIR/*
@@ -24,7 +24,7 @@ package(){
               cp -rf $BASEDIR/$dir/target/xitrum/* $DISTDIR
            fi
         done
-
+    rm -rf $DISTDIR/lib/*-sources.jar
     #3 separate gui and server jars.
     extractGUI
 }
