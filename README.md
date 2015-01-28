@@ -64,6 +64,8 @@ Here is the command to start the Spray server(With backend support)
 $ sbt "project ems-ui-dev" run
 ```
 
+Then please visit http://localhost:8090/ui-base/index.html
+
 Here is the command to start the Spray server(Without backend support)
 
 ```
