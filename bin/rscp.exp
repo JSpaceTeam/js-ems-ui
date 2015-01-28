@@ -1,0 +1,26 @@
+#!/usr/bin/expect
+
+if { [llength $argv] < 4 } {
+    puts "Usage: $argv0 IP USER PASSWORD SOURCE_DIR"
+    exit 1
+}
+
+set IP [lindex $argv 0]
+set USR [lindex $argv 1]
+set PASS [lindex $argv 2]
+set SOURCE_DIR [lindex $argv 3]
+set TARGET_DIR /home/$USR/jenkins_deploy
+set TMP_DIR /home/$USR/jenkins_his/[exec date +%Y-%m-%d_%S]
+
+puts "$argv0 $IP $USR $PASS $SOURCE_DIR $TARGET_DIR $TMP_DIR"
+
+set timeout 60
+spawn ssh $USR@$IP "mv -r $TARGET_DIR $TMP_DIR"
+expect "*yes/no*" { send "yes\r" }
+expect "*password:*" { send "$PASS\r"}
+
+spawn scp -r $SOURCE_DIR $USR@$IP:$TARGET_DIR
+expect "*yes/no*" { send "yes\r" }
+expect "*password:*" { send "$PASS\r" }
+set timeout -1
+expect "*#*" { send "exit 1\r" }
