@@ -20,4 +20,17 @@ wdefine(function () {
             alert("deploy_template");
         }
     });
+
+    me.on('loaded', function(){
+        console.log('ilp loaded');
+        Jx.MessageHub.publish("shadowfax:navigation:task:groups:init", {
+            taskId: me.id,
+            uniqueId: me.uniqueId,
+            data: [
+                {id: 'groups_filters', text: 'By filters'},
+                {id: 'groups_tags', text: 'By tags'},
+                {id: 'groups_locations', text: 'By location'}
+            ]
+        });
+    });
 });
