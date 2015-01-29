@@ -20,9 +20,9 @@ object Build extends Build {
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
       "net.juniper" %% "easy-rest-core" % "0.1.4"           withSources(),
-      "net.juniper" %% "shadowfax-ui-core" % "0.1.4"        withSources(),
-      "net.juniper" %% "shadowfax-ui-base" % "0.1.4"        withSources(),
-      "net.juniper" %% "shadowfax-webserver" % "0.1.4"      withSources(),
+      "net.juniper" %% "shadowfax-ui-core" % "0.1.5"        withSources(),
+      "net.juniper" %% "shadowfax-ui-base" % "0.1.5"        withSources(),
+      "net.juniper" %% "shadowfax-webserver" % "0.1.5"      withSources(),
       "com.github.tntim96" % "JSCover" % "1.0.15" % "test"  withSources(),
       "com.github.detro" % "phantomjsdriver" % "1.2.0"      withSources(),
       "org.specs2" %%  "specs2-core"   % "2.3.11"           withSources()
