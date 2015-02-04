@@ -4,7 +4,8 @@ wdefine(function(){
         lazyInit: false,
         url: Jx.Global.API_PREFIX + "/devicemanagement:device",
         requestHeader:{Accept:'application/yang.data+json'},
-        idAttribute: "uuid"
+        idAttribute: "uuid",
+        dataSelector: "device"
     });
 
     var menuMeta = [{id:'review_changes', name:'Review/Deploy Pending Changes'}, {id:'deploy_template', name:'Assign/Deploy Template'},
