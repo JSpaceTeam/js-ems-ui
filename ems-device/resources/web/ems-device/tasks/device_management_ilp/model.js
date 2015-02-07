@@ -27,31 +27,31 @@ wdefine(function(){
 
     this.config("main_grid", {model: 'main_model',
         columns : [
-            {"type":"string", "field":"system.hostname","title":"Name","hidden":false, width:"180px", template: "LinkTemplate"},
-            {"type":"string", "field":"system.ip","title":"IP Address","hidden":false, width: "150px", template: deviceIpFormatter},
-            {"type":"string", "field":"system.serial","title":"Serial Number","hidden":false, "width":"150px"},
-            {"type":"string", "field":"mgtConnection.status","title":"Connection Status", width: "120px", valueMap: [
+            {"type":"string", "field":"system.hostname","title":"Name","hidden":false, template: "LinkTemplate"},
+            {"type":"string", "field":"system.ip","title":"IP Address","hidden":false, template: deviceIpFormatter},
+            {"type":"string", "field":"system.serial","title":"Serial Number","hidden":false},
+            {"type":"string", "field":"mgtConnection.status","title":"Connection Status", valueMap: [
                 {value: "1", text: "Up", image: "/js-ems-ui/tasks/devicemgmt/images/up.png"},
                 {value: Nil, text: "Down", image: "/js-ems-ui/tasks/devicemgmt/images/down.png"}
             ]},
-            {"type":"string", "field":"configInfo.configStatus","title":"Managed Status",  width: "120px", valueMap: [
+            {"type":"string", "field":"configInfo.configStatus","title":"Managed Status", valueMap: [
                 {value: "0", text: "Connecting"}, {value: "1", text: "In Sync"}, {value: "2", text: "None"}, {value: "3", text: "Out Of Sync"},
                 {value: "4", text: "Sync Failed"}, {value: "5", text: "Synchronizing"}, {value: "6", text: "Modeled"}, {value: "7", text: "In RMA"},
                 {value: "8", text: "Reactivating"}, {value: "9", text: "Reactivate Failed"}, {value: "10", text: "Undefined"}, {value: "11", text: "Unknown"},
                 {value: "12", text: "In Sync"}, {value: "13", text: "Space Changed"}, {value: "14", text: "Device Changed"}, {value: "15", text: "Space & Device Changed"}, {value: "16", text: "Unmanaged"},
                 {value: "17", text: "Waiting for Deployment"}, {value: Nil, text: "NA"}
             ]},
-            {"type":"string", "field":"system.platform","title":"Platform","hidden":false, width: "150px"},
-            {"type":"string", "field":"system.osVersion","title":"OS Version","hidden":true, width: "230px"},
-            {"type":"string", "field":"schema","title":"Schema Version","hidden":true,width: "120px"},
-            {"type":"string", "field":"system.domainname","title":"Domain","hidden":true, width: "230px"},
-            {"type":"string", "field":"system.family","title":"Device Family","hidden":false, width: "120px"},
-            {"type":"string", "field":"configInfo.candidateConfigState","title":"Configuration State","hidden":true, width: "120px", valueMap: [
+            {"type":"string", "field":"system.platform","title":"Platform","hidden":false},
+            {"type":"string", "field":"system.osVersion","title":"OS Version","hidden":true},
+            {"type":"string", "field":"schema","title":"Schema Version","hidden":true},
+            {"type":"string", "field":"system.domainname","title":"Domain","hidden":true},
+            {"type":"string", "field":"system.family","title":"Device Family","hidden":false},
+            {"type":"string", "field":"configInfo.candidateConfigState","title":"Configuration State","hidden":true, valueMap: [
                 {value: "0", text: "NA"}, {value: "1", text: "Created"}, {value: "2", text: "Approved"}, {value: "3", text: "Rejected"}, {value: Nil, text: "NA"}
             ]},
-            {"type":"string", "field":"system.lastRebootTime","title":"Last Rebooted Time","hidden":true, template: deviceRebootedTimeFormatter,width: "120px"},
-            {"type":"string", "field":"system.vendor","title":"Vendor","hidden":false,width: "120px"},
-            {"type":"string", "field":"mgtConnection.auth","title":"Authentication Status","hidden":false,width: "120px", valueMap: [
+            {"type":"string", "field":"system.lastRebootTime","title":"Last Rebooted Time","hidden":true, template: deviceRebootedTimeFormatter},
+            {"type":"string", "field":"system.vendor","title":"Vendor","hidden":false},
+            {"type":"string", "field":"mgtConnection.auth","title":"Authentication Status","hidden":false, valueMap: [
                 {value: "0", text: "Credentials Based"}, {value: "1", text: "Key Based"}, {value: "2", text: "Key Conflict"}, {value: Nil, text: "NA"}
             ]},
             {"type":"string", "field":"mgtConnection.type","title":"Connection Type","hidden":true}
