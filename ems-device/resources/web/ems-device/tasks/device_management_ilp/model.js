@@ -56,7 +56,8 @@ wdefine(function(){
             ]},
             {"type":"string", "field":"mgtConnection.type","title":"Connection Type","hidden":true}
         ],
-        contextmenus: {menus: menuMeta}
+        contextmenus: {menus: menuMeta},
+        withBorder: false
     });
 
     this.config("main_menu", {link: true, menus: [
