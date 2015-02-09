@@ -65,7 +65,7 @@ wdefine(function(){
         {id: 'ext3_uploadKeys',  name: 'Upload Key', icon: 'fa fa-upload'},
         {id: 'show_filter', name : 'Filter', icon: 'fa fa-filter'},
         {id: 'delete',  name: 'Delete', icon: 'fa fa-times-circle'},
-        {id: 'actions', name: 'More Actions', menus: menuMeta}
+        {id: 'actions', name: 'More Actions', twoColumns: true, menus: menuMeta}
     ]});
 
     function deviceIpFormatter(dataItem) {
