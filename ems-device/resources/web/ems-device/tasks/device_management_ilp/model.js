@@ -61,10 +61,10 @@ wdefine(function(){
     });
 
     this.config("main_menu", {link: true, menus: [
-        {id: 'ext3_discoverDevices', icon: 'k-icon k-i-plus'},
-        {id: 'ext3_uploadKeys',  icon: 'k-icon k-i-folder-up'},
-        {id: 'show_filter', icon: 'k-icon k-i-funnel-clear'},
-        {id: 'delete',  icon: 'k-icon k-i-close'},
+        {id: 'ext3_discoverDevices', name: 'Add', icon: 'fa fa-plus-circle'},
+        {id: 'ext3_uploadKeys',  name: 'Upload Key', icon: 'fa fa-upload'},
+        {id: 'show_filter', name : 'Filter', icon: 'fa fa-filter'},
+        {id: 'delete',  name: 'Delete', icon: 'fa fa-times-circle'},
         {id: 'actions', name: 'More Actions', twoColumns: true, menus: menuMeta}
     ]});
 
