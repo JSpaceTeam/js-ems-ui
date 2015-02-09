@@ -65,7 +65,7 @@ wdefine(function(){
         {id: 'ext3_uploadKeys',  icon: 'k-icon k-i-folder-up'},
         {id: 'show_filter', icon: 'k-icon k-i-funnel-clear'},
         {id: 'delete',  icon: 'k-icon k-i-close'},
-        {id: 'actions', name: 'More Actions', menus: menuMeta}
+        {id: 'actions', name: 'More Actions', twoColumns: true, menus: menuMeta}
     ]});
 
     function deviceIpFormatter(dataItem) {
