@@ -19,8 +19,8 @@ object Build extends Build {
     scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8"),
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
-      "net.juniper" %% "shadowfax-ui-core"        % "0.1.9"        withSources(),
-      "net.juniper" %% "shadowfax-ui-base"        % "0.1.9"        withSources(),
+      "net.juniper" %% "shadowfax-ui-core"        % "0.1.9",
+      "net.juniper" %% "shadowfax-ui-base"        % "0.1.9",
       "net.juniper" %% "shadowfax-webserver"      % "0.1.9"        withSources(),
       "com.github.tntim96" % "JSCover" % "1.0.15" % "test"         withSources(),
       "com.github.detro" % "phantomjsdriver"      % "1.2.0"        withSources(),
