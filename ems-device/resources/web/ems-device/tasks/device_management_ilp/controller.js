@@ -21,6 +21,10 @@ wdefine(function () {
         }
     });
 
+    this.subscribeNotification("/restconf/streams/stream/database-changes/events", function(message) {
+        console.log(message);
+    });
+
     me.on('loaded', function(){
         console.log('ilp loaded');
         Jx.MessageHub.publish("shadowfax:navigation:task:groups:init", {
