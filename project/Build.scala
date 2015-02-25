@@ -15,13 +15,13 @@ object Build extends Build {
   var gSettings = Defaults.coreDefaultSettings ++ Seq(
     scalaVersion  := "2.11.4",
     organization  := "net.juniper",
-    version       := "0.1.9",
+    version       := "0.3.0",
     scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8"),
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
-      "net.juniper" %% "shadowfax-ui-core"        % "0.1.9",
-      "net.juniper" %% "shadowfax-ui-base"        % "0.1.9",
-      "net.juniper" %% "shadowfax-webserver"      % "0.1.9"        withSources(),
+      "net.juniper" %% "shadowfax-ui-core"        % "0.3.0",
+      "net.juniper" %% "shadowfax-ui-base"        % "0.3.0",
+      "net.juniper" %% "shadowfax-webserver"      % "0.3.0"        withSources(),
       "com.github.tntim96" % "JSCover" % "1.0.15" % "test"         withSources(),
       "com.github.detro" % "phantomjsdriver"      % "1.2.0"        withSources(),
       "org.specs2" %%  "specs2-core"              % "2.3.11"       withSources()

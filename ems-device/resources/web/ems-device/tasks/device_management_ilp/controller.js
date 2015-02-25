@@ -1,5 +1,6 @@
 wdefine(function () {
     var me = this;
+    this.config({notificationFilter: "net.juniper.jmp.cmp.deviceManager.DeviceDO"});
     /**
      * register events listener to selector elements and further elements.
      */
@@ -19,6 +20,14 @@ wdefine(function () {
         else if(options.trigger == "deploy_template"){
             alert("deploy_template");
         }
+    });
+
+    this.subscribeNotification("/restconf/streams/stream/database-changes/events?filter=" + this.config().notificationFilter, function(message) {
+        if(message.operation == "MODIFY") {
+            console.log("UPDATE: " + message);
+        }
+        else
+            console.log(message);
     });
 
     me.on('loaded', function(){

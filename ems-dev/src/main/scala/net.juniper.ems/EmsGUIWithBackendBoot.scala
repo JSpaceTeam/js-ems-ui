@@ -2,6 +2,8 @@ package net.juniper.ems
 
 import net.juniper.easyrest.boot.Bootstrap
 import net.juniper.easyrest.persistence.DatabaseSupport
+import net.juniper.easyrest.subsystem.EasyRestIntegrationSubsystem
+import net.juniper.ems.notifications.EmsNotifications
 import net.juniper.shadowfax.webserver.boot.WebActor
 import net.juniper.yang.EmsServerAllRoutes
 
@@ -17,4 +19,4 @@ class EmsGUIWithBackendActor extends WebActor with EmsServerAllRoutes {
   override def getRoute = super.getRoute ~ emsServerAllRoutes
 }
 
-class EmsGUIWithBackendBootstrap extends Bootstrap[EmsGUIWithBackendActor] with DatabaseSupport
+class EmsGUIWithBackendBootstrap extends Bootstrap[EmsGUIWithBackendActor] with DatabaseSupport with EasyRestIntegrationSubsystem with EmsNotifications
