@@ -1,5 +1,5 @@
 wdefine(function(){
-	this.metadata("device_oschart", {
+	this.config("device_oschart", {
 		height: "168",
 		title: {
             text: "OS Versions"

@@ -1,5 +1,5 @@
 wdefine(function(){
-    this.config({title: "Device Management"});
+    this.config({notificationFilter: "net.juniper.jmp.cmp.deviceManager.DeviceDO", title: "Device Management"});
     this.model("main_model", {
         lazyInit: false,
         url: Jx.Global.API_PREFIX + "/device-management:device",

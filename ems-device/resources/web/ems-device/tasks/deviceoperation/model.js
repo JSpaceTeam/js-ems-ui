@@ -1,5 +1,5 @@
 wdefine(function() {
-    this.metadata("navtab", {
+    this.config("navtab", {
         currentItem : 3
     });
     
@@ -54,7 +54,7 @@ wdefine(function() {
         reorderable : true
     });
 
-    this.metadata("scriptexec_grid", {
+    this.config("scriptexec_grid", {
         height : 390,
         model : 'partition_model',
         columns : [ {
@@ -98,7 +98,7 @@ wdefine(function() {
         reorderable : true
     });
 
-    this.metadata("partition_grid", {
+    this.config("partition_grid", {
         height : 390,
         model : 'partition_model',
         columns : [ {

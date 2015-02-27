@@ -1,5 +1,5 @@
 wdefine(function(){
-	this.metadata("device_platformchart", {
+	this.config("device_platformchart", {
 		height: "168",
 		title: {
             text: "Platforms of Devices"

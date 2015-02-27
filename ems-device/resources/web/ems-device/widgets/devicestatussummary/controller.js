@@ -20,7 +20,7 @@ wdefine(function(){
 	
 
     var me = this;
-    Jx.RestClient.get({url: Jx.Global.API_PREFIX + "/devicemgmt/devices/statusstatistics", callback: function(result, status, xhr){
+    Jx.RestClient.get(Jx.Global.API_PREFIX + "/devicemgmt/devices/statusstatistics", function(result, status, xhr){
     	var blankList = {};
     	for(var i = 0; i < 18; i ++){
     		blankList[i] = 0;
@@ -47,5 +47,5 @@ wdefine(function(){
     		me.el.find("#device_conn_status_" + i).html("&nbsp;" + connList[i] + "&nbsp;");
     	}
     	
-    }});
+    });
 });
