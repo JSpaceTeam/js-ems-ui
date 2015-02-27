@@ -1,9 +1,9 @@
 wdefine(["css!./details"], function(){
-	this.metadata("executescriptbt", {link: true});
+	this.config("executescriptbt", {link: true});
 	
 	this.model("template_model", {});
 	
-	this.metadata("template_grid", {height: 390, model: 'template_model', 
+	this.config("template_grid", {height: 390, model: 'template_model',
 		columns : [{"type":"string", "field":"name","title":"Template Name","visible":true},
 		           {"type":"string","field":"type","title":"Type","visible":true},
 		           {"type":"string","field":"version","title":"Version","visible":true},
@@ -20,7 +20,7 @@ wdefine(["css!./details"], function(){
 	
 	this.model("configlet_model", {});
 		
-	this.metadata("configlet_grid", {height: 390, model: 'configlet_model', 
+	this.config("configlet_grid", {height: 390, model: 'configlet_model',
 			columns : [{"type":"string", "field":"name","title":"Configlet Name","visible":true},
 			           {"type":"string","field":"category","title":"Category","visible":true},
 			           {"type":"string","field":"devicefamily","title":"Device Family","visible":true},
@@ -37,7 +37,7 @@ wdefine(["css!./details"], function(){
 	
 	this.model("configjob_model", {});
 	
-	this.metadata("configjob_grid", {height: 390, model: 'configjob_model', 
+	this.config("configjob_grid", {height: 390, model: 'configjob_model',
 			columns : [{"type":"string", "field":"name","title":"Job Name","visible":true},
 			           {"type":"string","field":"category","title":"Category","visible":true},
 			           {"type":"string","field":"devicefamily","title":"Device Family","visible":true},
