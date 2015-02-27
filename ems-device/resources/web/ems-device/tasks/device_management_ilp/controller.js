@@ -1,6 +1,5 @@
 wdefine(function () {
     var me = this;
-    this.config({notificationFilter: "net.juniper.jmp.cmp.deviceManager.DeviceDO"});
     /**
      * register events listener to selector elements and further elements.
      */

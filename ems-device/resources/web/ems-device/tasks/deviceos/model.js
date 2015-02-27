@@ -1,11 +1,11 @@
 wdefine(["css!./os"],function(){
-	this.metadata("navtab", {currentItem: 4});
+	this.config("navtab", {currentItem: 4});
 	
 	var deviceId = this.reqData("navItem");   
 	var imageurl = Jx.Global.API_PREFIX + "/devicemgmt/devices/"+ deviceId + '/stagedimages';
 	this.model("stagedImages_model", {url: imageurl});
 	
-	this.metadata("stagedimages_grid", {height: 390, model: 'stagedImages_model', 
+	this.config("stagedimages_grid", {height: 390, model: 'stagedImages_model',
 		columns : [{"type":"string", "field":"partition","title":"Image Name","hidden":false, "width":"180px", link: true},
 		           {"type":"string","field":"domain","title":"Domain","hidden":false, width: "230px"},
 		           {"type":"string","field":"version","title":"Version","hidden":false, width: "230px"},
@@ -27,7 +27,7 @@ wdefine(["css!./os"],function(){
 		reorderable:true
 	});
 
-    this.metadata("software_grid", {height: 390, model: 'stagedImages_model',
+    this.config("software_grid", {height: 390, model: 'stagedImages_model',
         columns : [{"type":"string", "field":"package","title":"Package Name","hidden":false, "width":"180px", link: true},
             {"type":"string","field":"domain","title":"Description","hidden":false, width: "230px"},
             {"type":"string","field":"version","title":"Version","hidden":false, width: "230px"},
@@ -48,7 +48,7 @@ wdefine(["css!./os"],function(){
         reorderable:true
     });
 
-    this.metadata("licenses_grid", {height: 390, model: 'stagedImages_model',
+    this.config("licenses_grid", {height: 390, model: 'stagedImages_model',
         columns : [{"type":"string", "field":"feature","title":"Feature Name","hidden":false, "width":"180px", link: true},
             {"type":"string","field":"license","title":"License Count","hidden":false, width: "230px"},
             {"type":"string","field":"used","title":"Used Count","hidden":false, width: "230px"},
@@ -73,7 +73,7 @@ wdefine(["css!./os"],function(){
 	var scripturl = Jx.Global.API_PREFIX + "/devicemgmt/devices/"+ deviceId + '/appliedscripts';
 	this.model("appliedScripts_model", {url: scripturl});
 	
-	this.metadata("appliedscripts_grid", {height: 390, model: 'appliedScripts_model', 
+	this.config("appliedscripts_grid", {height: 390, model: 'appliedScripts_model',
 		columns : [{"type":"string", "field":"scriptname","title":"Script Name","hidden":false, "width":"180px", link: true},
 		           {"type":"string","field":"domain","title":"Domain","hidden":false, width: "230px",visible:true},
 		           {"type":"string","field":"type","title":"Type","hidden":false, width: "230px",visible:true},

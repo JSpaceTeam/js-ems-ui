@@ -1,5 +1,5 @@
 wdefine(function(){
-	this.metadata("alarm_chart", {
+	this.config("alarm_chart", {
 		height: "168",
 		title: {
             text: "Alarms of Devices"
