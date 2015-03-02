@@ -1,11 +1,12 @@
 {
     "name": "Device Management",
+    "root": "/ui-core",
     "publisher": "Juniper Networks, Inc.",
     "version": "0.0.1",
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
-    "navigation_paths": [{"path": "nav.space.device/nav.space.device_management_category"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.device_management"},
+    "navigation_paths": [
+        {"path": "nav.space.device/nav.space.device_management_category/nav.space.device_management", "filter": "device_management"},
         {"path": "nav.space.device/nav.space.device_management_category/nav.space.model_devices"},
         {"path": "nav.space.device/nav.space.device_management_category/nav.space.connection_profiles"},
         {"path": "nav.space.device/nav.space.device_management_category/nav.space.unmanaged_device"},
@@ -25,22 +26,15 @@
         {"path": "nav.space.device/nav.space.imagesscripts/nav.space.operations"},
         {"path": "nav.space.device/nav.space.imagesscripts/nav.space.scriptbundles"}
     ],
-    "activities": [{
-        "module": "ss_bridge/bridge",
-        "filters": [{
-            "data": {
-                "uri": "ems-device/device_management_ilp",
-                "mime_type": "vnd.juniper.net.space.device_management.device_management"
-            }
-        }]
-    },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/model_devices_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.device-management.model_devices"
-                }
+    "activities": [
+       {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "device_management",
+              "data": {
+                "mime_type": "ems-device/device_management_ilp"
+              }
             }]
         },
         {
