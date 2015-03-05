@@ -21,8 +21,7 @@ object Build extends Build {
     libraryDependencies ++= Seq(
       "net.juniper" %% "shadowfax-ui-core"        % "0.3.1",
       "net.juniper" %% "shadowfax-ui-base"        % "0.3.1",
-      "net.juniper" %% "shadowfax-webserver"      % "0.3.1"        withSources(),
-      "org.specs2" %%  "specs2-core"              % "2.3.11"       withSources()
+      "net.juniper" %% "shadowfax-webserver"      % "0.3.1"
     ),
     publishMavenStyle := true,
     parallelExecution in Test := false,
