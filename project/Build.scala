@@ -19,9 +19,9 @@ object Build extends Build {
     scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8"),
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
-      "net.juniper" %% "shadowfax-ui-core"        % "0.3.1",
-      "net.juniper" %% "shadowfax-ui-base"        % "0.3.1",
-      "net.juniper" %% "shadowfax-webserver"      % "0.3.1"
+      "net.juniper" %% "shadowfax-ui-core"        % "0.3.1" % "provided",
+      "net.juniper" %% "shadowfax-ui-base"        % "0.3.1" % "provided",
+      "net.juniper" %% "shadowfax-webserver"      % "0.3.1" % "provided"
     ),
     publishMavenStyle := true,
     parallelExecution in Test := false,

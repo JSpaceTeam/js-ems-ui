@@ -1,4 +1,4 @@
-%define maintDir /usr/local/JSpace
+%define maintDir /usr/local/JSpace/slipstream/apps
 
 Name: js-ems-ui
 Summary: EMS client of JSpace
