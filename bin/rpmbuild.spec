@@ -1,4 +1,4 @@
-%define maintDir /usr/local/JSpace
+%define maintDir /usr/local/JSpace/slipstream/apps
 
 Name: js-ems-ui
 Summary: EMS client of JSpace
@@ -19,7 +19,7 @@ Elements Managment System for JSpace
 echo "RPM_SOURCE_DIR=$RPM_SOURCE_DIR"
 cp -a %{dist_dir}/%{name} .
 echo "$(pwd)"
-echo %{version}.%{release} > ./js-ems-ui/configuration/build_version
+#echo %{version}.%{release} > ./js-ems-ui/configuration/build_version
 
 %install
 echo RPM_BUILD_ROOT=$RPM_BUILD_ROOT
