@@ -6,25 +6,18 @@
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
     "navigation_paths": [
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.device_management", "filter": "device_management"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.model_devices", "filter": "model_devices"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.connection_profiles", "filter": "connection_profiles"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.unmanaged_device", "filter": "unmanaged_device"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.secure_console", "filter": "secure_console"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.device_adapters", "filter": "device_adapters"},
-        {"path": "nav.space.device/nav.space.device_template"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.device_management", "filter": "device_management"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.model_devices", "filter": "model_devices"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.connection_profiles", "filter": "connection_profiles"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.unmanaged_device", "filter": "unmanaged_device"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.secure_console", "filter": "secure_console"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.device_adapters", "filter": "device_adapters"},
         {"path": "nav.space.device/nav.space.device_template/nav.space.template", "filter": "template_management"},
         {"path": "nav.space.device/nav.space.device_template/nav.space.definition", "filter": "template_definition"},
-        {"path": "nav.space.device/nav.space.configlet"},
         {"path": "nav.space.device/nav.space.configlet/nav.space.configlets", "filter": "configlets"},
         {"path": "nav.space.device/nav.space.configlet/nav.space.configurationview", "filter": "configuration_view"},
         {"path": "nav.space.device/nav.space.configlet/nav.space.xpathandreges", "filter": "xpath_reges"},
-        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationfilter", "filter": "configuration_filter"},
-        {"path": "nav.space.device/nav.space.imagesscripts"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.images", "filter": "images"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.scripts", "filter": "scripts"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.operations", "filter": "operations"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.scriptbundles", "filter": "script_bundles"}
+        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationfilter", "filter": "configuration_filter"}
     ],
     "activities": [
        {
