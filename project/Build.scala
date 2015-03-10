@@ -15,23 +15,20 @@ object Build extends Build {
   var gSettings = Defaults.coreDefaultSettings ++ Seq(
     scalaVersion  := "2.11.4",
     organization  := "net.juniper",
-    version       := "0.3.0",
+    version       := "0.3.2",
     scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8"),
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
-      "net.juniper" %% "shadowfax-ui-core"        % "0.3.0",
-      "net.juniper" %% "shadowfax-ui-base"        % "0.3.0",
-      "net.juniper" %% "shadowfax-webserver"      % "0.3.0"        withSources(),
-      "com.github.tntim96" % "JSCover" % "1.0.15" % "test"         withSources(),
-      "com.github.detro" % "phantomjsdriver"      % "1.2.0"        withSources(),
-      "org.specs2" %%  "specs2-core"              % "2.3.11"       withSources()
+      "net.juniper" %% "shadowfax-ui-core"        % "0.3.2",
+      "net.juniper" %% "shadowfax-ui-base"        % "0.3.2",
+      "net.juniper" %% "shadowfax-webserver"      % "0.3.2"
     ),
     publishMavenStyle := true,
     parallelExecution in Test := false,
     publishTo := Some(Resolver.file("file",  new File(System.getProperty("user.home") + "/mavenrepo/release"))),
     unmanagedResourceDirectories in Compile += baseDirectory.value / "resources",
     unmanagedResources in Compile += baseDirectory.value / "web.json",
-    resolvers += "Local Maven Repository" at "file://" + Path.userHome.absolutePath + "/mavenrepo/release",
+    resolvers += "Local Maven Repository" at Path.userHome.asFile.toURI.toURL + "/mavenrepo/release",
     resolvers += "JSpace Maven Repo" at "http://10.155.87.253:8080/mavenrepo/release"
   ) ++ scalariformSettings ++ net.virtualvoid.sbt.graph.Plugin.graphSettings ++ XitrumPackage.copy()
 
