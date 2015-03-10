@@ -15,13 +15,13 @@ object Build extends Build {
   var gSettings = Defaults.coreDefaultSettings ++ Seq(
     scalaVersion  := "2.11.4",
     organization  := "net.juniper",
-    version       := "0.3.2",
+    version       := "0.3.3",
     scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8"),
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
-      "net.juniper" %% "shadowfax-ui-core"        % "0.3.2",
-      "net.juniper" %% "shadowfax-ui-base"        % "0.3.2",
-      "net.juniper" %% "shadowfax-webserver"      % "0.3.2"
+      "net.juniper" %% "shadowfax-ui-core"        % "0.3.3",
+      "net.juniper" %% "shadowfax-ui-base"        % "0.3.3",
+      "net.juniper" %% "shadowfax-webserver"      % "0.3.3"
     ),
     publishMavenStyle := true,
     parallelExecution in Test := false,
@@ -32,7 +32,7 @@ object Build extends Build {
     resolvers += "JSpace Maven Repo" at "http://10.155.87.253:8080/mavenrepo/release"
   ) ++ scalariformSettings ++ net.virtualvoid.sbt.graph.Plugin.graphSettings ++ XitrumPackage.copy()
 
-  lazy val root = Project("ems-ui", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/run.sh", "bin/run.bat")).aggregate(server, emsConfigure, emsDevice, emsRbac, emsAdmin, emsNetworkMonitor, boot)
+  lazy val root = Project("ems-ui", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/run.sh", "bin/run.bat") ++ Seq(publishArtifact := false)).aggregate(server, emsConfigure, emsDevice, emsRbac, emsAdmin, emsNetworkMonitor, boot)
 
   lazy val server = Project("ems-ui-server", file("server"), settings = gSettings)
 
@@ -47,7 +47,6 @@ object Build extends Build {
   lazy val emsNetworkMonitor = Project("ems-ui-networkmonitor", file("ems-networkmonitor"), settings = gSettings).dependsOn(server)
 
   lazy val boot = Project("ems-ui-boot", file("ems-boot"), settings = gSettings).dependsOn(server)
-
   //This module is only for development convenience, so skip packaging.
   lazy val dev = Project("ems-ui-dev", file("ems-dev"), settings = gSettings ++ XitrumPackage.skip).dependsOn(server)
 }

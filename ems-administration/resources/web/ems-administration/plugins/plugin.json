@@ -4,144 +4,62 @@
     "version": "0.0.1",
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
-    "navigation_paths": [{"path": "nav.space.administration/nav.space.fabric"},
-        {"path": "nav.space.administration/nav.space.fabric/nav.space.spacenodesettings"},
-        {"path": "nav.space.administration/nav.space.fabric/nav.space.snmpmanager"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.dbbackuprestore"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.license"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.applications"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.troubleshootting"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.platform_certificate"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.cacrl_certificate"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.auth_servers"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.smtp_servers"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.proxy_servers"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.tags"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.dmi_schema"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.audit_log"}
+    "navigation_paths": [
+        {"path": "nav.space.administration/nav.space.server_profiles/nav.space.auth_servers", "filter":"authservers"},
+        {"path": "nav.space.administration/nav.space.server_profiles/nav.space.smtp_servers", "filter":"smtpservers"},
+        {"path": "nav.space.administration/nav.space.server_profiles/nav.space.proxy_servers", "filter":"proxyservers"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.tags", "filter":"tags"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.dmi_schema", "filter":"dmischema"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.audit_log", "filter":"auditlog"}
     ],
     "activities": [{
-        "module": "ss_bridge/bridge",
-        "filters": [{
+            "module": "bridge",
+            "filters": [{
+                "id": "authservers",
+                "data": {
+                    "mime_type": "ems-administration/auth_servers_management_ilp"
+                }
+            }]
+        },
+        {
+            "filters": [{
+                "id": "smtpservers",
+                "data": {
+                    "mime_type": "ems-administration/smtp_servers_management_ilp"
+                }
+            }]
+        },
+        {
+            "filters": [{
+                "id": "proxyservers",
+                "data": {
+                    "mime_type": "ems-administration/proxy_servers_management_ilp"
+                }
+            }]
+        },
+        {
+          "filters": [{
+            "id": "tags",
             "data": {
-                "uri": "ems-administration/space_node_management_ilp",
-                "mime_type": "vnd.juniper.net.space.administration.administration.spacenodesettings"
+              "mime_type": "ems-administration/proxy_servers_management_ilp"
             }
-        }]
-    },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/snmp_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.snmpmanager"
-                }
-            }]
+          }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/database_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.dbbackuprestore"
-                }
-            }]
+          "filters": [{
+            "id": "dmischema",
+            "data": {
+              "mime_type": "ems-administration/proxy_servers_management_ilp"
+            }
+          }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/license_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.license"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/applications_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.applications"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/troubleshootting_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.troubleshootting"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/platform_certificate_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.platform_certificate"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/cacrl_certificate_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.cacrl_certificate"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/auth_servers_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.auth_servers"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/smtp_servers_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.smtp_servers"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/proxy_servers_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.proxy_servers"
-                }
-            }]
-        },{
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/tags_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.tags"
-                }
-            }]
-        },{
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/dmi_schema_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.dmi_schema"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-administration/audit_log_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.administration.administration.audit_log"
-                }
-            }]
-        }]
+          "filters": [{
+            "id": "auditlog",
+            "data": {
+              "mime_type": "ems-administration/proxy_servers_management_ilp"
+            }
+          }]
+        }
+    ]
 }

@@ -6,25 +6,18 @@
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
     "navigation_paths": [
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.device_management", "filter": "device_management"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.model_devices"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.connection_profiles"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.unmanaged_device"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.secure_console"},
-        {"path": "nav.space.device/nav.space.device_management_category/nav.space.device_adapters"},
-        {"path": "nav.space.device/nav.space.device_template"},
-        {"path": "nav.space.device/nav.space.device_template/nav.space.template"},
-        {"path": "nav.space.device/nav.space.device_template/nav.space.definition"},
-        {"path": "nav.space.device/nav.space.configlet"},
-        {"path": "nav.space.device/nav.space.configlet/nav.space.configlets"},
-        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationview"},
-        {"path": "nav.space.device/nav.space.configlet/nav.space.xpathandreges"},
-        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationfilter"},
-        {"path": "nav.space.device/nav.space.imagesscripts"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.images"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.scripts"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.operations"},
-        {"path": "nav.space.device/nav.space.imagesscripts/nav.space.scriptbundles"}
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.device_management", "filter": "device_management"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.model_devices", "filter": "model_devices"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.connection_profiles", "filter": "connection_profiles"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.unmanaged_device", "filter": "unmanaged_device"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.secure_console", "filter": "secure_console"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.device_adapters", "filter": "device_adapters"},
+        {"path": "nav.space.device/nav.space.device_template/nav.space.template", "filter": "template_management"},
+        {"path": "nav.space.device/nav.space.device_template/nav.space.definition", "filter": "template_definition"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.configlets", "filter": "configlets"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationview", "filter": "configuration_view"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.xpathandreges", "filter": "xpath_reges"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationfilter", "filter": "configuration_filter"}
     ],
     "activities": [
        {
@@ -38,129 +31,153 @@
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/connection_profiles_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.device-management.connection_profiles"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "model_devices",
+              "data": {
+                "mime_type": "ems-device/model_devices_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/unmanaged_device_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.device-management.unmanaged_device"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "connection_profiles",
+              "data": {
+                "mime_type": "ems-device/connection_profiles_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/secure_console_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.device-management.secure_console"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "unmanaged_device",
+              "data": {
+                "mime_type": "ems-device/unmanaged_device_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/device_adapters_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.device-management.device_adapters"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "secure_console",
+              "data": {
+                "mime_type": "ems-device/secure_console_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/template_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.template.template"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "device_adapters",
+              "data": {
+                "mime_type": "ems-device/device_adapters_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/template_definition_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.template.definition"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "template_management",
+              "data": {
+                "mime_type": "ems-device/template_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/configlet_definition_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.configlet.definition"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "template_definition",
+              "data": {
+                "mime_type": "ems-device/template_definition_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/configuration_view_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.configlet.configurationview"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "configlets",
+              "data": {
+                "mime_type": "ems-device/configlet_definition_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/xpath_reges_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.configlet.xpathandreges"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "configuration_view",
+              "data": {
+                "mime_type": "ems-device/configuration_view_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/configuration_filter_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.configlet.configurationfilter"
-                }
+          "module": "bridge",
+          "filters": [
+          {
+            "id": "xpath_reges",
+            "data": {
+              "mime_type": "ems-device/xpath_reges_management_ilp"
+            }
+          }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "configuration_filter",
+              "data": {
+                "mime_type": "ems-device/configuration_filter_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/images_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.imagesscripts.images"
-                }
+          "module": "bridge",
+          "filters": [
+          {
+            "id": "images",
+            "data": {
+              "mime_type": "ems-device/images_management_ilp"
+            }
+          }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "scripts",
+              "data": {
+                "mime_type": "ems-device/scripts_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/scripts_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.imagesscripts.scripts"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "operations",
+              "data": {
+                "mime_type": "ems-device/operations_management_ilp"
+              }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/operations_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.imagesscripts.operations"
-                }
-            }]
-        },
-        {
-            "module": "ss_bridge/bridge",
-            "filters": [{
-                "data": {
-                    "uri": "ems-device/script_bundles_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.imagesscripts.scriptbundles"
-                }
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "script_bundles",
+              "data": {
+                "mime_type": "ems-device/script_bundles_management_ilp"
+              }
             }]
         }]
 }

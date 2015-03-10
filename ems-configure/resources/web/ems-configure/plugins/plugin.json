@@ -4,45 +4,44 @@
     "version": "0.0.1",
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
-    "navigation_paths": [{"path": "nav.space.configure/nav.space.reports"},
-        {"path": "nav.space.configure/nav.space.reports/nav.space.reportdefinition"},
-        {"path": "nav.space.configure/nav.space.reports/nav.space.generatedreport"},
-        {"path": "nav.space.configure/nav.space.configfiles/nav.space.configfilemgmt"},
-        {"path": "nav.space.configure/nav.space.jobs/nav.space.jobmgmt"}],
+    "navigation_paths": [
+        {"path": "nav.space.configure/nav.space.device_images/nav.space.scriptbundles", "filter": "scriptbundles"},
+        {"path": "nav.space.configure/nav.space.device_images/nav.space.operations", "filter": "operations"},
+        {"path": "nav.space.configure/nav.space.device_images/nav.space.images", "filter": "images"},
+        {"path": "nav.space.configure/nav.space.device_images/nav.space.scripts", "filter": "scripts"}],
     "activities": [{
-        "module": "ss_bridge/bridge",
+        "module": "bridge",
         "filters": [{
+            "id": "scriptbundles",
             "data": {
-                "uri": "ems-configure/report_definition_management_ilp",
-                "mime_type": "vnd.juniper.net.space.configure.configure.reports.reportdefinition"
+                "mime_type": "ems-configure/script_bundles_management_ilp"
             }
         }]
     },
         {
-            "module": "ss_bridge/bridge",
+            "module": "bridge",
             "filters": [{
+                "id": "operations",
                 "data": {
-                    "task_id": "ui-device/devicemgmt",
-                    "uri": "ems-configure/generated_report_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.configure.configure.reports.generatedreport"
+                    "mime_type": "ems-configure/operations_management_ilp"
                 }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
+            "module": "bridge",
             "filters": [{
+                "id": "images",
                 "data": {
-                    "uri": "ems-configure/config_file_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.configure.configfilemgmt"
+                    "mime_type": "ems-configure/images_management_ilp"
                 }
             }]
         },
         {
-            "module": "ss_bridge/bridge",
+            "module": "bridge",
             "filters": [{
+                "id": "scripts",
                 "data": {
-                    "uri": "ems-configure/job_management_ilp",
-                    "mime_type": "vnd.juniper.net.space.configure.jobmgmt"
+                    "mime_type": "ems-configure/scripts_management_ilp"
                 }
             }]
         }]
