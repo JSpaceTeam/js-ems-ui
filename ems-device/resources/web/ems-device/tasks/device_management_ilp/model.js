@@ -2,7 +2,7 @@ wdefine(function(){
     this.config({notificationFilter: "net.juniper.jmp.cmp.deviceManager.DeviceDO", title: "Device Management"});
     this.model("main_model", {
         lazyInit: false,
-        url: Jx.Global.API_PREFIX + "/device-management:device",
+        url: Jx.Global.API_PREFIX + "/iq-common-data-model:device",
         requestHeader:{Accept:'application/yang.data+json'},
         idAttribute: "uuid",
         dataSelector: "device"

@@ -36,5 +36,30 @@
                     "mime_type": "ems-administration/proxy_servers_management_ilp"
                 }
             }]
-        }]
+        },
+        {
+          "filters": [{
+            "id": "tags",
+            "data": {
+              "mime_type": "ems-administration/proxy_servers_management_ilp"
+            }
+          }]
+        },
+        {
+          "filters": [{
+            "id": "dmischema",
+            "data": {
+              "mime_type": "ems-administration/proxy_servers_management_ilp"
+            }
+          }]
+        },
+        {
+          "filters": [{
+            "id": "auditlog",
+            "data": {
+              "mime_type": "ems-administration/proxy_servers_management_ilp"
+            }
+          }]
+        }
+    ]
 }
