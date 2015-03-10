@@ -1,6 +1,6 @@
 {
-    "name": "Device Management",
-    "root": "/ui-core",
+    "name": "devices",
+    "root": "ui-core",
     "publisher": "Juniper Networks, Inc.",
     "version": "0.0.1",
     "release_date": "02.07.2014",
@@ -23,11 +23,11 @@
        {
           "module": "bridge",
           "filters": [
-            {
-              "id": "device_management",
-              "data": {
-                "mime_type": "ems-device/device_management_ilp"
-              }
+              {
+                "id": "device_management",
+                "data": {
+                  "mime_type": "ems-device/device_management_ilp"
+                }
             }]
         },
         {
