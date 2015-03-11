@@ -1,0 +1,183 @@
+{
+    "name": "devices",
+    "root": "ui-core",
+    "publisher": "Juniper Networks, Inc.",
+    "version": "0.0.1",
+    "release_date": "02.07.2014",
+    "min_platform_version": "0.0.1",
+    "navigation_paths": [
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.device_management", "filter": "device_management"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.model_devices", "filter": "model_devices"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.connection_profiles", "filter": "connection_profiles"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.unmanaged_device", "filter": "unmanaged_device"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.secure_console", "filter": "secure_console"},
+        {"path": "nav.space.device/nav.space.all_devices/nav.space.device_adapters", "filter": "device_adapters"},
+        {"path": "nav.space.device/nav.space.device_template/nav.space.template", "filter": "template_management"},
+        {"path": "nav.space.device/nav.space.device_template/nav.space.definition", "filter": "template_definition"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.configlets", "filter": "configlets"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationview", "filter": "configuration_view"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.xpathandreges", "filter": "xpath_reges"},
+        {"path": "nav.space.device/nav.space.configlet/nav.space.configurationfilter", "filter": "configuration_filter"}
+    ],
+    "activities": [
+       {
+          "module": "bridge",
+          "filters": [
+              {
+                "id": "device_management",
+                "data": {
+                  "mime_type": "ems-device/device_management_ilp"
+                }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "model_devices",
+              "data": {
+                "mime_type": "ems-device/model_devices_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "connection_profiles",
+              "data": {
+                "mime_type": "ems-device/connection_profiles_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "unmanaged_device",
+              "data": {
+                "mime_type": "ems-device/unmanaged_device_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "secure_console",
+              "data": {
+                "mime_type": "ems-device/secure_console_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "device_adapters",
+              "data": {
+                "mime_type": "ems-device/device_adapters_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "template_management",
+              "data": {
+                "mime_type": "ems-device/template_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "template_definition",
+              "data": {
+                "mime_type": "ems-device/template_definition_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "configlets",
+              "data": {
+                "mime_type": "ems-device/configlet_definition_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "configuration_view",
+              "data": {
+                "mime_type": "ems-device/configuration_view_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+          {
+            "id": "xpath_reges",
+            "data": {
+              "mime_type": "ems-device/xpath_reges_management_ilp"
+            }
+          }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "configuration_filter",
+              "data": {
+                "mime_type": "ems-device/configuration_filter_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+          {
+            "id": "images",
+            "data": {
+              "mime_type": "ems-device/images_management_ilp"
+            }
+          }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "scripts",
+              "data": {
+                "mime_type": "ems-device/scripts_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "operations",
+              "data": {
+                "mime_type": "ems-device/operations_management_ilp"
+              }
+            }]
+        },
+        {
+          "module": "bridge",
+          "filters": [
+            {
+              "id": "script_bundles",
+              "data": {
+                "mime_type": "ems-device/script_bundles_management_ilp"
+              }
+            }]
+        }]
+}
