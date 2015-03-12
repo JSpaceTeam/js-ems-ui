@@ -5,22 +5,59 @@
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
     "navigation_paths": [
+        {"path": "nav.space.administration/nav.space.rbac_category/nav.space.useraccounts", "filter":"useraccounts"},
+        {"path": "nav.space.administration/nav.space.rbac_category/nav.space.roles", "filter":"roles"},
+        {"path": "nav.space.administration/nav.space.rbac_category/nav.space.domains", "filter":"domains"},
+        {"path": "nav.space.administration/nav.space.rbac_category/nav.space.remoteprofiles", "filter":"remoteprofiles"},
         {"path": "nav.space.administration/nav.space.server_profiles/nav.space.auth_servers", "filter":"authservers"},
         {"path": "nav.space.administration/nav.space.server_profiles/nav.space.smtp_servers", "filter":"smtpservers"},
         {"path": "nav.space.administration/nav.space.server_profiles/nav.space.proxy_servers", "filter":"proxyservers"},
+        {"path": "nav.space.administration/feature_management/nav.space.license", "filter":"license"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.certificate", "filter":"certificate"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.dbbackuprestore", "filter":"dbbackuprestore"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.applications", "filter":"applications"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.troubleshootting", "filter":"troubleshootting"},
+        {"path": "nav.space.administration/nav.space.system/nav.space.platform_certificate", "filter":"platformcertificate"},
         {"path": "nav.space.administration/nav.space.system/nav.space.tags", "filter":"tags"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.dmi_schema", "filter":"dmischema"},
-        {"path": "nav.space.administration/nav.space.system/nav.space.audit_log", "filter":"auditlog"}
+        {"path": "nav.space.administration/nav.space.system/nav.space.dmi_schema", "filter":"dmischema"}
     ],
     "activities": [{
-            "module": "bridge",
             "filters": [{
-                "id": "authservers",
+                "id": "useraccounts",
                 "data": {
-                    "mime_type": "ems-administration/auth_servers_management_ilp"
+                    "mime_type": "ems-administration/user_accounts_management_ilp"
                 }
             }]
-        },
+        },{
+        "filters": [{
+            "id": "roles",
+            "data": {
+                "mime_type": "ems-administration/roles_management_ilp"
+            }
+        }]
+        },{
+            "filters": [{
+                "id": "domains",
+                "data": {
+                    "mime_type": "ems-administration/domains_management_ilp"
+                }
+            }]
+        },{
+            "filters": [{
+                "id": "remoteprofiles",
+                "data": {
+                    "mime_type": "ems-administration/remote_profiles_management_ilp"
+                }
+            }]
+        },{
+        "module": "bridge",
+        "filters": [{
+            "id": "authservers",
+            "data": {
+                "mime_type": "ems-administration/auth_servers_management_ilp"
+            }
+        }]
+    },
         {
             "filters": [{
                 "id": "smtpservers",
@@ -36,30 +73,66 @@
                     "mime_type": "ems-administration/proxy_servers_management_ilp"
                 }
             }]
+        },{
+            "filters": [{
+                "id": "license",
+                "data": {
+                    "mime_type": "ems-administration/license_management_ilp"
+                }
+            }]
         },
         {
           "filters": [{
-            "id": "tags",
+            "id": "certificate",
             "data": {
-              "mime_type": "ems-administration/proxy_servers_management_ilp"
+              "mime_type": "ems-administration/cacrl_certificate_management_ilp"
             }
           }]
         },
         {
-          "filters": [{
-            "id": "dmischema",
-            "data": {
-              "mime_type": "ems-administration/proxy_servers_management_ilp"
-            }
-          }]
+            "filters": [{
+                "id": "dbbackuprestore",
+                "data": {
+                    "mime_type": "ems-administration/database_management_ilp"
+                }
+            }]
+        },
+        {
+            "filters": [{
+                "id": "applications",
+                "data": {
+                    "mime_type": "ems-administration/applications_management_ilp"
+                }
+            }]
         },
         {
           "filters": [{
-            "id": "auditlog",
+            "id": "troubleshootting",
             "data": {
-              "mime_type": "ems-administration/proxy_servers_management_ilp"
+              "mime_type": "ems-administration/troubleshootting_management_ilp"
             }
           }]
+        },{
+            "filters": [{
+                "id": "platformcertificate",
+                "data": {
+                    "mime_type": "ems-administration/platform_certificate_management_ilp"
+                }
+            }]
+        },{
+            "filters": [{
+                "id": "tags",
+                "data": {
+                    "mime_type": "ems-administration/tags_management_ilp"
+                }
+            }]
+        },{
+            "filters": [{
+                "id": "dmischema",
+                "data": {
+                    "mime_type": "ems-administration/dmi_schema_management_ilp"
+                }
+            }]
         }
     ]
 }
