@@ -5,6 +5,7 @@
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
     "navigation_paths": [
+        {"path": "nav.space.configure/nav.space.config_overview/nav.space.commit_inventory", "filter": "configure"},
         {"path": "nav.space.configure/nav.space.device_images/nav.space.scriptbundles", "filter": "scriptbundles"},
         {"path": "nav.space.configure/nav.space.device_images/nav.space.operations", "filter": "operations"},
         {"path": "nav.space.configure/nav.space.device_images/nav.space.images", "filter": "images"},
@@ -12,12 +13,20 @@
     "activities": [{
         "module": "bridge",
         "filters": [{
+            "id": "configure",
+            "data": {
+                "mime_type": "ems-configure/config_file_management_ilp"
+            }
+        }]
+        },{
+        "module": "bridge",
+        "filters": [{
             "id": "scriptbundles",
             "data": {
                 "mime_type": "ems-configure/script_bundles_management_ilp"
             }
         }]
-    },
+        },
         {
             "module": "bridge",
             "filters": [{
