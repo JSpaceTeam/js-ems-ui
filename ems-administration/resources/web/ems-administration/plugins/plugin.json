@@ -22,6 +22,7 @@
         {"path": "nav.space.administration/nav.space.system/nav.space.dmi_schema", "filter":"dmischema"}
     ],
     "activities": [{
+      "module": "bridge",
             "filters": [{
                 "id": "useraccounts",
                 "data": {
@@ -29,6 +30,7 @@
                 }
             }]
         },{
+      "module": "bridge",
         "filters": [{
             "id": "roles",
             "data": {
@@ -36,6 +38,7 @@
             }
         }]
         },{
+      "module": "bridge",
             "filters": [{
                 "id": "domains",
                 "data": {
@@ -43,6 +46,7 @@
                 }
             }]
         },{
+      "module": "bridge",
             "filters": [{
                 "id": "remoteprofiles",
                 "data": {
@@ -59,6 +63,7 @@
         }]
     },
         {
+          "module": "bridge",
             "filters": [{
                 "id": "smtpservers",
                 "data": {
@@ -67,6 +72,7 @@
             }]
         },
         {
+          "module": "bridge",
             "filters": [{
                 "id": "proxyservers",
                 "data": {
@@ -74,6 +80,7 @@
                 }
             }]
         },{
+        "module": "bridge",
             "filters": [{
                 "id": "license",
                 "data": {
@@ -82,6 +89,7 @@
             }]
         },
         {
+          "module": "bridge",
           "filters": [{
             "id": "certificate",
             "data": {
@@ -98,6 +106,7 @@
             }]
         },
         {
+          "module": "bridge",
             "filters": [{
                 "id": "applications",
                 "data": {
@@ -106,6 +115,7 @@
             }]
         },
         {
+          "module": "bridge",
           "filters": [{
             "id": "troubleshootting",
             "data": {
@@ -113,6 +123,7 @@
             }
           }]
         },{
+        "module": "bridge",
             "filters": [{
                 "id": "platformcertificate",
                 "data": {
@@ -120,6 +131,7 @@
                 }
             }]
         },{
+        "module": "bridge",
             "filters": [{
                 "id": "tags",
                 "data": {
@@ -127,6 +139,7 @@
                 }
             }]
         },{
+        "module": "bridge",
             "filters": [{
                 "id": "dmischema",
                 "data": {
