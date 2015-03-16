@@ -4,14 +4,68 @@
     "version": "0.0.1",
     "release_date": "02.07.2014",
     "min_platform_version": "0.0.1",
-    "navigation_paths": [{"path": "nav.monitors/nav.space.monitors/nav.space.reports", "filter": "filter"}
+    "navigation_paths": [{"path": "nav.monitors/nav.space.monitors/nav.space.alerts", "filter": "alerts"},
+        {"path": "nav.monitors/nav.space.monitors/nav.space.events", "filter": "events"},
+        {"path": "nav.monitors/nav.space.monitors/nav.space.user_sesstions", "filter": "usersesstions"},
+        {"path": "nav.monitors/nav.space.reports/nav.space.custom_reports/nav.space.reportdefinition", "filter": "reports"},
+        {"path": "nav.monitors/nav.space.reports/nav.space.generatedreport", "filter": "generatedreport"},
+        {"path": "nav.monitors/nav.space.logs/nav.space.audit_log", "filter": "auditlog"},
+        {"path": "nav.monitors/nav.space.jobs/nav.space.jobs", "filter": "jobs"}
     ],
     "activities": [{
         "module": "bridge",
         "filters": [{
-            "id": "filter",
+            "id": "alerts",
             "data": {
-                "mime_type": "ems-networkmonitor/node_list_management_ilp"
+                "mime_type": "ems-networkmonitor/alarms_management_ilp"
+            }
+        }]
+    },{
+        "module": "bridge",
+        "filters": [{
+            "id": "events",
+            "data": {
+                "mime_type": "ems-networkmonitor/events_management_ilp"
+            }
+        }]
+    },{
+        "module": "bridge",
+        "filters": [{
+            "id": "usersesstions",
+            "data": {
+                "mime_type": "ems-networkmonitor/user_sesstions_management_ilp"
+            }
+        }]
+    },{
+        "module": "bridge",
+        "filters": [{
+            "id": "reports",
+            "data": {
+                "mime_type": "ems-networkmonitor/report_definition_management_ilp"
+            }
+        }]
+    },{
+        "module": "bridge",
+        "filters": [{
+            "id": "generatedreport",
+            "data": {
+                "mime_type": "ems-networkmonitor/generated_report_management_ilp"
+            }
+        }]
+    },{
+        "module": "bridge",
+        "filters": [{
+            "id": "auditlog",
+            "data": {
+                "mime_type": "ems-networkmonitor/audit_log_management_ilp"
+            }
+        }]
+    },{
+        "module": "bridge",
+        "filters": [{
+            "id": "jobs",
+            "data": {
+                "mime_type": "ems-networkmonitor/jobs_management_ilp"
             }
         }]
     }]
