@@ -10,18 +10,20 @@ object Build extends Build {
 
   val sprayV = "1.3.2"
 
-  var spray_jsonV = "1.2.6"
+  val spray_jsonV = "1.2.6"
+
+  val shadowfax_V = "0.3.4"
 
   var gSettings = Defaults.coreDefaultSettings ++ Seq(
     scalaVersion  := "2.11.4",
     organization  := "net.juniper",
-    version       := "0.3.3",
+    version       := "0.3.4",
     scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8"),
     parallelExecution in Test := false,
     libraryDependencies ++= Seq(
-      "net.juniper" %% "shadowfax-ui-core"        % "0.3.3",
-      "net.juniper" %% "shadowfax-ui-base"        % "0.3.3",
-      "net.juniper" %% "shadowfax-webserver"      % "0.3.3"
+      "net.juniper" %% "shadowfax-ui-core"        % shadowfax_V,
+      "net.juniper" %% "shadowfax-ui-base"        % shadowfax_V,
+      "net.juniper" %% "shadowfax-webserver"      % shadowfax_V
     ),
     publishMavenStyle := true,
     parallelExecution in Test := false,
@@ -32,15 +34,13 @@ object Build extends Build {
     resolvers += "JSpace Maven Repo" at "http://10.155.87.253:8080/mavenrepo/release"
   ) ++ scalariformSettings ++ net.virtualvoid.sbt.graph.Plugin.graphSettings ++ XitrumPackage.copy()
 
-  lazy val root = Project("ems-ui", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/run.sh", "bin/run.bat") ++ Seq(publishArtifact := false)).aggregate(server, emsConfigure, emsDevice, emsRbac, emsAdmin, emsNetworkMonitor, boot)
+  lazy val root = Project("ems-ui", file("."), settings = gSettings ++ XitrumPackage.copy("configuration", "bin/run.sh", "bin/run.bat") ++ Seq(publishArtifact := false)).aggregate(server, emsConfigure, emsDevice, emsAdmin, emsNetworkMonitor, boot)
 
   lazy val server = Project("ems-ui-server", file("server"), settings = gSettings)
 
   lazy val emsConfigure = Project("ems-ui-configure", file("ems-configure"), settings = gSettings).dependsOn(server)
 
   lazy val emsDevice = Project("ems-ui-device", file("ems-device"), settings = gSettings).dependsOn(server)
-
-  lazy val emsRbac = Project("ems-ui-rbac", file("ems-rbac"), settings = gSettings).dependsOn(server)
 
   lazy val emsAdmin = Project("ems-ui-administration", file("ems-administration"), settings = gSettings).dependsOn(server)
 

@@ -10,7 +10,7 @@
         {"path": "nav.monitors/nav.space.reports/nav.space.custom_reports/nav.space.reportdefinition", "filter": "reports"},
         {"path": "nav.monitors/nav.space.reports/nav.space.generatedreport", "filter": "generatedreport"},
         {"path": "nav.monitors/nav.space.logs/nav.space.audit_log", "filter": "auditlog"},
-        {"path": "nav.monitors/nav.space.jobs/nav.space.jobs", "filter": "jobs"}
+        {"path": "nav.monitors/nav.space.jobs/nav.space.job_management", "filter": "job_management"}
     ],
     "activities": [{
         "module": "bridge",
@@ -63,7 +63,7 @@
     },{
         "module": "bridge",
         "filters": [{
-            "id": "jobs",
+            "id": "job_management",
             "data": {
                 "mime_type": "ems-networkmonitor/jobs_management_ilp"
             }
