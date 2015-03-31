@@ -12,7 +12,7 @@ object Build extends Build {
 
   val spray_jsonV = "1.2.6"
 
-  val shadowfax_V = "0.3.4"
+  val shadowfax_V = "0.3.6"
 
   var gSettings = Defaults.coreDefaultSettings ++ Seq(
     scalaVersion  := "2.11.4",
