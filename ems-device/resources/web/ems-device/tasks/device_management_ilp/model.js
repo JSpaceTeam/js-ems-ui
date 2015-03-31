@@ -5,7 +5,8 @@ wdefine(function(){
         url: Jx.Global.API_PREFIX + "/iq-common-data-model:device",
         requestHeader:{Accept:'application/yang.data+json'},
         idAttribute: "uuid",
-        dataSelector: "device"
+        dataSelector: "device",
+        getTotal: true
     });
 
     var menuMeta = [{id:'review_changes', name:'Review/Deploy Pending Changes'}, {id:'deploy_template', name:'Assign/Deploy Template'},
